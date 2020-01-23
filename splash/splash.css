@@ -13,7 +13,7 @@
    background: #d0dfe9;
    width: 100%;
    height:5px;
-   --progress-background: #013ca6;
+   --progress-background: red; //#013ca6
 }
 .bottom-img {
     position: absolute;
