@@ -1,0 +1,23 @@
+.inner {
+    background-color: #fff;
+}
+.top-img {
+    margin-top:15%;
+    padding:20% !important;
+}
+.progress-div {
+    position: relative;
+    padding:20%;
+}
+.progress {
+   background: #d0dfe9;
+   width: 100%;
+   height:5px;
+   --progress-background: #013ca6;
+}
+.bottom-img {
+    position: absolute;
+    bottom:0;
+    padding:25% !important;
+}
+
