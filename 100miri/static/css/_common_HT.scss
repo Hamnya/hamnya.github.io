@@ -1,0 +1,528 @@
+@mixin clearfix {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+.health {
+    // font color css 변수
+    --ft-c-222: #222;
+    --ft-c-222-rgb: 34, 34, 34;
+    --ft-c-666: #666;
+    --ft-c-666-rgb: 102, 102, 102;
+    --ft-c-888: #888;
+    --ft-c-888-rgb: 136, 136, 136;
+    --ft-c-999: #999;
+    --ft-c-999-rgb: 153, 153, 153;
+
+    // bg color css 변수
+    --bg-c-bg: #f0f2f2;
+    --bg-c-bg-rgb: 240, 242, 242;
+    --bg-c-line: #ddd;
+    --bg-c-line-rgb: 221, 221, 221;
+    --bg-c-btn: #bbb;
+    --bg-c-btn-rgb: 187, 187, 187;
+
+    // key color css 변수
+    --key-c-222: #222;
+    --key-c-222-rgb: 34, 34, 34;
+    --key-c-b: #05a2be;
+    --key-c-b-rgb: 5, 162, 190;
+    --key-c-g: #0ecea7;
+    --key-c-g-rgb: 14, 206, 167;
+    --key-c-fff: #fff;
+    --key-c-fff-rgb: 255, 255, 255;
+
+    // 건강 color css 변수
+    --ht-c-g: #0ecea7;
+    --ht-c-g-rgb: 14, 206, 167;
+    --ht-c-o: #fc880a;
+    --ht-c-o-rgb: 252, 136, 10;
+    --ht-c-r: #f84646;
+    --ht-c-r-rgb: 248, 70, 70;
+
+    // 건강 badge style
+    @mixin badge {
+        min-width: 45px;
+        height: 20px;
+        padding: 0 5px;
+        line-height: 20px;
+        border-radius: 2px;
+        font-size: 13px;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    ion-badge {
+
+        @include badge;
+
+        &.badge-green {
+            background: var(--ht-c-g);
+        }
+
+        &.badge-orange {
+            background: var(--ht-c-o);
+        }
+
+        &.badge-red {
+            background: var(--ht-c-r);
+        }
+
+        &.badge-outline {
+            background: transparent;
+            border: 1px solid #000;
+            color: #000;
+            box-sizing: border-box;
+            height: 20px;
+            line-height: 18px;
+        }
+    }
+
+    // 건강 toggle style
+    .toggle-area {
+
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: 25px;
+        background: var(--bg-c-line);
+        border-radius: 25px;
+
+        .toggle {
+            display: inline-block;
+            width: 100%;
+
+            input {
+                opacity: 0;
+                position: absolute;
+                margin: 0;
+
+                &:checked {
+                    ~label {
+                        background: $fc222;
+                        color: #fff;
+                    }
+                }
+            }
+
+            label {
+                position: relative;
+                display: block;
+                min-width: 40px;
+                padding: 0 9px;
+                text-align: center;
+                background: transparent;
+                height: 25px;
+                line-height: 23px;
+                font-size: 13px;
+                font-weight: 350;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                color: #fff;
+                border-radius: 25px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: transparent;
+                    transition: all 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+                    border-radius: 25px;
+                }
+            }
+
+            &:nth-child(1) {
+                label:before {
+                    transform: translateX(100%);
+                }
+
+                input:checked~label {
+                    background: transparent;
+                    z-index: 1;
+                    box-shadow: 0 10px 15px rgba(0, 30, 30, 0.15);
+
+                    &:before {
+                        transform: translateX(0);
+                        background: $fc222;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                label:before {
+                    transform: translateX(-100%);
+                }
+
+                input:checked~label {
+                    background: transparent;
+                    z-index: 1;
+                    box-shadow: 0 10px 15px rgba(0, 30, 30, 0.15);
+
+                    &:before {
+                        transform: translateX(0);
+                        background: $fc222;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+
+    }
+    
+    /* 서브메인 공통*/
+    .cont-header {
+        .text-area {
+            .text {
+                line-height: 20px;
+                font-size: 16px;
+                font-weight: 350;
+                color: $fc222;
+            }
+            .btn-clear {
+                height: 16px;
+                --padding-start: 0;
+                --padding-end: 0;
+                margin-top: 28px;
+                line-height: 16px;
+                vertical-align: top;
+                font-size: 14px;
+                font-weight: 350;
+                color: $fc222;
+            }
+        }
+        .btn-select {
+            position: relative;
+            display: inline-flex;
+            max-width: 100%;
+            height: 35px;
+            --padding-top: 0px;
+            --padding-bottom: 0px;
+            --padding-start: 16px;
+            --padding-end: 43px;
+            line-height: 35px;
+            --border-radius: 35px;
+            font-size: 16px;
+            letter-spacing: -0.015em;
+            color: #fff;
+            font-weight: 350;
+            --background: linear-gradient(90deg, #05a2be, #0ecea7);
+            --background-activated: linear-gradient(90deg, #05a2be, #0ecea7);
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: url('#{$img-path}/ht/arw_white_bottom.png') no-repeat top 55% right 15px / 14px auto;
+                z-index: 1;
+            }
+        }
+    }
+
+    .cont-body {
+        .title-area {
+            margin-bottom: 32px;
+
+            .text {
+                font-weight: 350;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        .main-card {
+            ion-card-title {
+                color: $fc222;
+                font-size: 0;
+                background: url('#{$img-path}/arw_black.png') no-repeat right 25px top 50% / 8px auto;
+
+                dl {
+                    height: 24px;
+                    line-height: 24px;
+                    dt {
+                        display: inline-block;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+
+                    dd {
+                        display: inline-block;
+                        margin-left: 15px;
+                        font-weight: 350;
+                        font-size: 16px;
+
+                        .age {
+                            font-size: 30px;
+                            font-weight: 500;
+                            letter-spacing: -0.015em;
+                        }
+                    }
+                }
+            }
+
+            &.result-null {
+                ion-card-content {
+                    text-align: center;
+                    padding: 30px 0 27px;
+                }
+            }
+
+            ion-card-content {
+                ul {
+                    display: flex;
+
+                    li {
+                        flex: 1;
+                        text-align: center;
+
+                        .chart {
+
+                            margin: 5px auto;
+
+                            /* img 태그 임시 (삭제 가능) */
+                            img {
+                                width: 110px;
+                                margin: 0 auto;
+                            }
+
+                        }
+
+                        dl {
+                            padding-top: 4px;
+
+                            dt {
+                                font-size: 14px;
+                                line-height: 24px;
+                                font-weight: 350;
+                                letter-spacing: -0.015em;
+                                color: #737373;
+                            }
+
+                            dd {
+                                font-size: 16px;
+                                line-height: 25px;
+                                font-weight: 500;
+                                letter-spacing: -0.015em;
+                                color: #ee5353;
+                            }
+                        }
+                    }
+                }
+
+                .img-area {
+                    width: 162px;
+                    height: 162px;
+                    margin: 0 auto;
+                }
+
+                .text-area {
+                    margin-top: 16px;
+
+                    .text {
+                        font-size: 16px;
+                        font-weight: 350;
+                        line-height: 22px;
+                        color: $fc222;
+                    }
+                }
+
+            }
+
+            .card-footer {
+                ion-button {
+                    .text {
+                        margin-left: 28px;
+                        font-weight: 500;
+                    }
+                    .arrow {
+                        display: block;
+                        margin-left: 5px;
+                        span {
+                            display: inline-block;
+                            width: 7px;
+                            height: 7px;
+                            border-top: 1px solid #fff;
+                            border-left: 1px solid #fff;
+                            transform: rotate(135deg);
+                            margin-top: 3px;
+                            margin-bottom: 3px;
+                            margin-right: -4px;
+                            border-radius: 1px;
+                            animation: arrow-animate 1.4s infinite;
+
+                            &:nth-child(2) {
+                                animation-delay: -0.1s;
+                            }
+
+                            &:nth-child(3) {
+                                animation-delay: -0.2s;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    /* 생활습관 입력 공통 */
+    .question-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: -35px;
+        right: 20px;
+        width: 70px;
+        height: 70px;
+        line-height: 24px;
+        border-radius: 70px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        background: $kc-blue;
+        text-align: center;
+        z-index: 11;
+    }
+
+    .question-list {
+        margin-top: 26px;
+
+        li {
+            margin-bottom: 41px;
+
+            .num {
+                font-size: 30px;
+                line-height: 36px;
+                color: $kc-blue;
+                font-weight: 700;
+            }
+
+            .question {
+                margin-top: 4px;
+                margin-bottom: 28px;
+                font-size: 18px;
+                line-height: 24px;
+                color: $fc222;
+                font-weight: 500;
+                .sub-text {
+                    display: block;
+                    margin-top: 6px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-weight: 350;
+                    color: $fc666;
+                }
+            }
+
+            .question-radio {
+                .radio-item {
+                    margin-top: 15px;
+                    --border-color: var(--bg-c-line);
+                    --border-width: 1px;
+                    --border-radius: 14px;
+                    --transition: none;
+                    --padding-start: 24px;
+                    --inner-padding-bottom: 22px;
+                    --inner-padding-top: 22px;
+
+                    .radio-btn {
+                        width: 20px;
+                        height: 20px;
+                        margin: 0 11px auto 0;
+                        --color-checked: transparent;
+                        background: var(--bg-c-line) url('#{$img-path}/ht/ico_radio_gray.png') no-repeat 0 0 / 100% auto;
+                        border-radius: 20px;
+                    }
+
+                    .radio-btn.radio-checked {
+                        background: $kc-blue url('#{$img-path}/ht/ico_radio_white.png') no-repeat 0 0 / 100% auto;
+                    }
+
+                    .radio-label {
+                        margin: 0;
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: 350;
+                        color: $fc222;
+                    }
+
+                    &.item-radio-checked {
+                        --background: #fff;
+                        --border-color: #fff;
+                        --box-shadow: 0 8px 19px rgba(0, 0, 0, 0.15);
+
+                        .radio-label {
+                            color: $kc-blue;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            .question-card {
+                ion-card-content {
+                    ion-grid {
+                        padding: 12px 0 10px;
+                    }
+                }
+            }
+        }
+        .input-after {
+            position: absolute;
+            bottom: 7px;
+            right: 0;
+            font-size: 16px;
+            font-weight: 350;
+            color: $fc999;
+        }
+    }
+
+    
+    
+    /* input 공통 */
+    .form-group {
+        .form-item {
+            &.item-has-focus {
+                .form-label {
+                    color: $fc999;
+                }
+            }
+
+            &.item-has-errors {
+                .form-label {
+                    color: #ee1c25;
+                }
+            }
+
+            .form-label {
+                color: $fc222;
+                font-weight: 350;
+            }
+        }
+    }
+
+    @keyframes arrow-animate {
+        0% {
+            opacity: 0;
+            transform: rotate(135deg) translate(5px, 5px);
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: rotate(135deg) translate(-5px, -5px);
+        }
+    }
+}

@@ -1,0 +1,4880 @@
+@charset "UTF-8";
+/* NotoSans */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 100;
+  src: local("NotoSansKR-Thin"), url("/static/fonts/notosans/NotoSansKR-Thin.woff2") format("woff2"), url("/static/fonts/notosans/NotoSansKR-Thin.woff") format("woff");
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 350;
+  src: local("NotoSansKR-DemiLight"), url("/static/fonts/notosans/NotoSansKR-DemiLight.woff2") format("woff2"), url("/static/fonts/notosans/NotoSansKR-DemiLight.woff") format("woff");
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 500;
+  src: local("NotoSansKR-Medium"), url("/static/fonts/notosans/NotoSansKR-Medium.woff2") format("woff2"), url("/static/fonts/notosans/NotoSansKR-Medium.woff") format("woff");
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 700;
+  src: local("NotoSansKR-Bold"), url("/static/fonts/notosans/NotoSansKR-Bold.woff2") format("woff2"), url("/static/fonts/notosans/NotoSansKR-Bold.woff") format("woff");
+  font-stretch: normal;
+  unicode-range: U+0021-33FF,U+A000-F8FF,U+FB00-F251;
+}
+
+/* Roboto */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("/static/fonts/roboto/roboto-light.woff2") format("woff2"), url("/static/fonts/roboto/roboto-light.woff") format("woff"), url("/static/fonts/roboto/roboto-light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("/static/fonts/roboto/roboto-regular.woff2") format("woff2"), url("/static/fonts/roboto/roboto-regular.woff") format("woff"), url("/static/fonts/roboto/roboto-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("/static/fonts/roboto/roboto-medium.woff2") format("woff2"), url("/static/fonts/roboto/roboto-medium.woff") format("woff"), url("/static/fonts/roboto/roboto-medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("/static/fonts/roboto/roboto-bold.woff2") format("woff2"), url("/static/fonts/roboto/roboto-bold.woff") format("woff"), url("/static/fonts/roboto/roboto-bold.ttf") format("truetype");
+}
+
+html {
+  color: #222;
+  font-family: "NotoSansKR";
+  letter-spacing: -0.0125em;
+  line-height: 1.5;
+}
+
+html, body {
+  font-weight: 500;
+  font-family: "NotoSansKR";
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+  margin: 0;
+  padding: 0;
+}
+
+dl, ul, ol, menu, li {
+  list-style: none;
+}
+
+a {
+  color: #222;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+/* ionic reset */
+html.ios, html.md {
+  --ion-default-font: 'NotoSansKR';
+}
+
+.sc-ion-card-ios-h, .sc-ion-card-ios-s {
+  --color: inherit;
+}
+
+pre {
+  overflow: inherit;
+  font-weight: 350;
+  font-family: "NotoSansKR";
+  white-space: pre-line;
+}
+
+input, select, textarea, button, a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+input:focus, select:focus, textarea:focus, button:focus, a:focus {
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.noto {
+  font-family: "NotoSansKR";
+}
+
+.roboto, .cs .date, .cs .cont-count {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.fc222 {
+  color: #222 !important;
+}
+
+.fc666 {
+  color: #666 !important;
+}
+
+.fc888 {
+  color: #888 !important;
+}
+
+.fc999 {
+  color: #999 !important;
+}
+
+.kc-b {
+  color: #05a2be !important;
+}
+
+.kc-g, .cs .status.done {
+  color: #0ecea7 !important;
+}
+
+.pc-b {
+  color: #0096ff !important;
+}
+
+.pc-r {
+  color: #ee1c25 !important;
+}
+
+.pc-o {
+  color: #e47600 !important;
+}
+
+ion-item {
+  --background: transparent;
+  --background-activated: transparent;
+}
+
+/* layout */
+#header {
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  --border-width: 0;
+}
+
+#header ion-toolbar {
+  --min-height: inherit;
+  --padding-top: 0;
+  --padding-bottom: 65px;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+#header ion-toolbar:last-child {
+  --border-width: 0;
+}
+
+#header ion-toolbar ion-buttons {
+  --min-height: 55px;
+  width: 100%;
+  height: 45px;
+  padding: 12px 20px 0;
+}
+
+#header ion-toolbar ion-buttons ion-back-button {
+  --min-height: 25px;
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+#header ion-toolbar ion-buttons ion-back-button .button-native {
+  width: 100%;
+  background: url(/static/images/btn_back.png) no-repeat 0 0/100% auto;
+}
+
+#header ion-toolbar ion-buttons ion-back-button .button-native .button-inner {
+  display: none;
+}
+
+#header ion-toolbar ion-buttons .btn-alarm {
+  --background: transparent;
+  --background-activated: transparent;
+  position: absolute;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  background: url(/static/images/btn_alarm.png) no-repeat 0 0/100% auto;
+}
+
+#header ion-toolbar ion-buttons .btn-alarm.active {
+  background-image: url(/static/images/btn_alarm_active.png);
+}
+
+#header ion-toolbar ion-buttons .btn-alarm.add-w {
+  background-image: url(/static/images/btn_alarm_w.png);
+}
+
+#header ion-toolbar ion-buttons .btn-alarm.add-w.active {
+  background-image: url(/static/images/btn_alarm_w_active.png);
+}
+
+#header ion-toolbar ion-buttons .btn-close {
+  --background: transparent;
+  --background-activated: transparent;
+  position: absolute;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  opacity: .5;
+  background: url("/static/images/sidemenu/btn_close.png") no-repeat 0 0/100% auto;
+}
+
+#header ion-toolbar ion-title {
+  top: 45px;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+#header ion-toolbar ion-title.title-ios {
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  height: 65px;
+  padding: 4px 20px 0;
+  text-align: left;
+}
+
+#header ion-toolbar ion-title.header-t2 {
+  height: 132px;
+  padding: 31.5px 20px 24px;
+  font-size: 0;
+}
+
+#header ion-toolbar ion-title.header-t2 h1 {
+  display: inline-block;
+  font-size: 41px;
+  line-height: 41px;
+  font-weight: 350;
+}
+
+#header ion-toolbar ion-title.header-t2 .bar {
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin-top: 30px;
+  background: #222222;
+}
+
+#header ion-toolbar ion-title.header-t2 .btn-icon {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-left: 5px;
+  vertical-align: bottom;
+  text-decoration: none;
+  background: url("/static/images/ht/ico_info.png") no-repeat 0 0/cover;
+}
+
+#header ion-toolbar ion-title.header-t2 .btn-icon span {
+  text-indent: -9999%;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#header.sub-header-home {
+  background-color: #f0f2f2;
+}
+
+#header.sub-header-home ion-buttons ion-back-button {
+  display: none;
+}
+
+#header.sub-header-home ion-toolbar {
+  --background: transparent;
+}
+
+#header.sub-header-home ion-toolbar.toolbar-wide {
+  --padding-bottom: 132px;
+}
+
+#header.sub-header-home::after {
+  display: none;
+}
+
+#header.sub-header-home .btn-top {
+  --padding-top: 4px;
+  --padding-bottom: 5px;
+  --padding-start: 14px;
+  --padding-end: 30px;
+  --border-radius: 25px;
+  --background: url(/static/images/li/btn_top.png) no-repeat right 15px top 50% / 6px auto;
+  --background-activated: url(/static/images/li/btn_top.png) no-repeat right 15px top 50% / 6px auto;
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  height: inherit;
+  font-size: 16px;
+  border-radius: 25px;
+  background: -webkit-gradient(linear, left top, right top, from(#05a2be), to(#0ecea7));
+  background: linear-gradient(90deg, #05a2be, #0ecea7);
+}
+
+#header.sub-header-home.header-st2 ion-buttons ion-back-button {
+  display: block;
+}
+
+#header.sub-header {
+  background-color: #fff;
+}
+
+#header.sub-header ion-buttons .btn-alarm {
+  display: none;
+}
+
+#header.sub-header ion-buttons .btn-top {
+  --padding-top: 0;
+  --padding-bottom: 1px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  --border-radius: 25px;
+  --background: transparent;
+  --background-activated: transparent;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  height: 25px;
+  margin: 0;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 12.5px;
+  background: #ddd;
+}
+
+#header.sub-header.header-st2 {
+  -webkit-box-shadow: 0 8.5px 19px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 8.5px 19px rgba(0, 0, 0, 0.15);
+}
+
+#header.sub-header.header-st3 ion-toolbar {
+  --background: #f0f2f2;
+}
+
+#body {
+  --padding-top: 0;
+  --padding-end: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --background: #f0f2f2;
+}
+
+#body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+#body .cont-header {
+  padding: 0 20px 50px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 8.5px 19px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 8.5px 19px rgba(0, 0, 0, 0.15);
+}
+
+#body .cont-body {
+  padding: 30px 20px;
+}
+
+#body .cont-body.cont-st1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+#body .cont-body.cont-st1 p {
+  font-size: 16px;
+  letter-spacing: -0.0125em;
+}
+
+#body .cont-body.cont-st1 .ico {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 22px;
+}
+
+#footer {
+  position: relative;
+  text-align: center;
+  background: transparent;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+#footer ion-toolbar {
+  --padding-top: 72px;
+  --padding-bottom: 25px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --border-width: 0;
+  --ion-toolbar-background: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 147px;
+  border-radius: 25px 25px 0 0;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.14);
+}
+
+#footer ion-toolbar .btn-flicking {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 25px;
+  background-color: #fff;
+}
+
+#footer ion-toolbar .btn-flicking::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin-left: -30px;
+  border-radius: 1.5px;
+  background: #ddd;
+}
+
+#footer ion-toolbar .btn-home {
+  --background: transparent;
+  --background-activated: transparent;
+  --padding-start: 0;
+  --box-shadow: none;
+  width: 25px;
+  height: 25px;
+  background: url(/static/images/btn_home.png) no-repeat 0 0/100% auto;
+}
+
+#footer ion-toolbar .btn-home.add-w {
+  background-image: url(/static/images/btn_home_w.png);
+}
+
+#footer ion-toolbar .btn-more {
+  --background: transparent;
+  --background-activated: transparent;
+  --padding-start: 0;
+  width: 25px;
+  height: 25px;
+  background: url(/static/images/btn_more.png) no-repeat 0 0/100% auto;
+}
+
+#footer ion-toolbar .btn-more.add-w {
+  background-image: url(/static/images/btn_more_w.png);
+}
+
+#footer ion-toolbar .nav {
+  margin: 0 25px;
+  border-radius: 50px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#footer ion-toolbar .nav li {
+  display: inline-block;
+  font-size: 0;
+}
+
+#footer ion-toolbar .nav > li.active ul {
+  display: block;
+}
+
+#footer ion-toolbar .nav > li.active > a {
+  position: relative;
+  top: -5px;
+  color: #222;
+}
+
+#footer ion-toolbar .nav > li.active > a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  margin-left: -2px;
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #222;
+}
+
+#footer ion-toolbar .nav > li > a {
+  display: block;
+  padding: 10px 12px 11px;
+  font-weight: 750;
+  font-size: 20px;
+  letter-spacing: -0.06em;
+  color: #888;
+  text-decoration: none;
+}
+
+#footer ion-toolbar .nav ul, #footer ion-toolbar .nav .subm {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 46px;
+  padding: 0 10px;
+  text-align: left;
+  white-space: nowrap;
+  border-top: 1px solid #ddd;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#footer ion-toolbar .nav ul::-webkit-scrollbar, #footer ion-toolbar .nav .subm::-webkit-scrollbar {
+  display: none;
+}
+
+#footer ion-toolbar .nav ul li.active a, #footer ion-toolbar .nav .subm li.active a {
+  color: #222;
+  border-top: 3px solid #222;
+}
+
+#footer ion-toolbar .nav ul li, #footer ion-toolbar .nav .subm li {
+  padding: 0 10px;
+}
+
+#footer ion-toolbar .nav ul li a, #footer ion-toolbar .nav .subm li a {
+  display: block;
+  padding: 7px 0;
+  font-size: 18px;
+  letter-spacing: -0.025em;
+  color: #888;
+  text-decoration: none;
+}
+
+.sidenav {
+  --width: 100%;
+}
+
+.sidenav .toolbar-more {
+  --min-height: 122px;
+  --padding-top: 38px;
+  --padding-end: 0;
+  --padding-start: 0;
+  --padding-bottom: 0;
+  --border-width: 0 !important;
+}
+
+.sidenav .toolbar-more ion-title {
+  position: absolute;
+  top: 0;
+  height: 60px;
+  padding: 0 0 0 20px;
+}
+
+.sidenav .toolbar-more ion-title .logo {
+  display: block;
+  width: 96px;
+  height: 60px;
+  background: url(/static/images/me/logo.png) no-repeat 0 50%/100% auto;
+}
+
+.sidenav .toolbar-more ion-buttons {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 60px;
+}
+
+.sidenav .toolbar-more ion-buttons .btn-close {
+  width: 25px;
+  height: 25px;
+  background: url(/static/images/me/btn_close.png) no-repeat 0 0/100% auto;
+}
+
+.sidenav .toolbar-more ion-buttons .btn-setting {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background: url(/static/images/me/btn_set.png) no-repeat 0 0/100% auto;
+}
+
+.sidenav .toolbar-more .btn-mypage {
+  height: 40px;
+  margin: 0 20px 0;
+  border-radius: 0 20px 20px 20px;
+  -webkit-box-shadow: 0 8px 19px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 19px rgba(0, 0, 0, 0.2);
+}
+
+.sidenav .toolbar-more .btn-mypage span {
+  width: 100%;
+  letter-spacing: -0.05rem;
+  text-align: left;
+  background: url(/static/images/me/btn_arr_w.png) no-repeat right 0 top 50%/8px auto;
+}
+
+.sidenav ion-content {
+  padding: 0;
+  --background: #f0f2f2;
+}
+
+.sidenav ion-card {
+  margin: 0;
+  padding: 30px 20px;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  --background: #fff;
+}
+
+.sidenav ion-card + ion-card {
+  margin-top: 10px;
+}
+
+.sidenav .main-menu-card {
+  padding-top: 15px;
+}
+
+.sidenav .main-menu {
+  margin: 0;
+}
+
+.sidenav .main-menu ion-item {
+  --padding-start: 0;
+}
+
+.sidenav .main-menu ion-item + ion-item {
+  margin-top: 40px;
+}
+
+.sidenav .main-menu [class^='main-menu-item'] {
+  padding-left: 85px;
+  font-weight: 350;
+  font-size: 14px;
+  background-repeat: no-repeat;
+  background-size: 50px auto;
+  background-position: 0 5px;
+}
+
+.sidenav .main-menu [class^='main-menu-item'] b {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.sidenav .main-menu .main-menu-item-certify {
+  background-image: url(/static/images/me/ico_main_menu1.png);
+}
+
+.sidenav .main-menu .main-menu-item-family {
+  background-image: url(/static/images/me/ico_main_menu2.png);
+}
+
+.sidenav .main-menu .main-menu-item-myfa {
+  background-image: url(/static/images/me/ico_main_menu3.png);
+}
+
+.sidenav .main-menu .main-menu-item-share {
+  background-image: url(/static/images/me/ico_main_menu4.png);
+}
+
+.sidenav .sub-menu-card ion-card-header {
+  padding: 0;
+  font-size: 20px;
+  color: #05a2be;
+}
+
+.sidenav .sub-menu-card ion-card-content {
+  padding: 0;
+}
+
+.sidenav .sub-menu-card ion-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sidenav .sub-menu-card ion-item {
+  --padding-start: 40px;
+  --padding-end: 0;
+  --inner-padding-end: 0;
+  --detail-icon-font-size: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  padding: 0;
+  font-weight: 350;
+  font-size: 16px;
+  letter-spacing: -0.03rem;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: 0 50%;
+}
+
+.sidenav .sub-menu-card .sub-menu-cs1 {
+  background-image: url(/static/images/me/ico_menu_cs1.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-cs2 {
+  background-image: url(/static/images/me/ico_menu_cs2.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-cs3 {
+  background-image: url(/static/images/me/ico_menu_cs3.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-tip1 {
+  background-image: url(/static/images/me/ico_menu_tip1.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-ht1 {
+  background-image: url(/static/images/me/ico_menu_ht1.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-ht2 {
+  background-image: url(/static/images/me/ico_menu_ht2.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-ht3 {
+  background-image: url(/static/images/me/ico_menu_ht3.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-is1 {
+  background-image: url(/static/images/me/ico_menu_is1.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-is2 {
+  background-image: url(/static/images/me/ico_menu_is2.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-is3 {
+  background-image: url(/static/images/me/ico_menu_is3.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-is4 {
+  background-image: url(/static/images/me/ico_menu_is4.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-li1 {
+  background-image: url(/static/images/me/ico_menu_li1.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-li2 {
+  background-image: url(/static/images/me/ico_menu_li2.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-li3 {
+  background-image: url(/static/images/me/ico_menu_li3.png);
+}
+
+.sidenav .sub-menu-card .sub-menu-li4 {
+  background-image: url(/static/images/me/ico_menu_li4.png);
+}
+
+.hooking-message {
+  position: fixed;
+  bottom: -194px;
+  overflow: hidden;
+  width: 100%;
+  padding: 35px 0;
+  text-align: center;
+  background: #fff;
+  border-radius: 25px 25px 0 0;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.14);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.hooking-message p {
+  font-size: 18px;
+}
+
+.hooking-message .hooking-btn-group {
+  margin-top: 30px;
+  font-size: 0;
+}
+
+.hooking-message .hooking-btn-group ion-button {
+  display: inline-block;
+  height: 40px;
+  font-weight: 350;
+  font-size: 16px;
+}
+
+.hooking-message .hooking-btn-group ion-button + ion-button {
+  margin-left: 10px;
+}
+
+.hooking-message .hooking-btn-group .btn-st1 {
+  --background: #999;
+  --background-activated: #999;
+}
+
+.hooking-message .hooking-btn-group .btn-st2 {
+  --background: #222;
+  --background-activated: #222;
+}
+
+.hooking-message .btn-flicking {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 25px;
+  background-color: #fff;
+}
+
+.hooking-message .btn-flicking::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin-left: -30px;
+  border-radius: 1.5px;
+  background: #ddd;
+}
+
+.mt-10 {
+  margin-top: 10px !important;
+}
+
+.mt-15 {
+  margin-top: 15px !important;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.pt-5 {
+  padding-top: 5px !important;
+}
+
+.pt-10 {
+  padding-top: 10px !important;
+}
+
+.pt-20 {
+  padding-top: 20px !important;
+}
+
+.pt-30 {
+  padding-top: 30px !important;
+}
+
+.pt-40 {
+  padding-top: 40px !important;
+}
+
+.pb-10 {
+  padding-bottom: 10px !important;
+}
+
+.pb-20 {
+  padding-bottom: 20px !important;
+}
+
+.pb-30 {
+  padding-bottom: 30px !important;
+}
+
+.fs14 {
+  font-size: 14px !important;
+}
+
+.fs16 {
+  font-size: 16px !important;
+}
+
+.fs18 {
+  font-size: 18px !important;
+}
+
+.fs21 {
+  font-size: 21px !important;
+}
+
+.fw350 {
+  font-weight: 350 !important;
+}
+
+.fw500 {
+  font-weight: 500 !important;
+}
+
+.fw700 {
+  font-weight: 700 !important;
+}
+
+.c222 {
+  color: #222 !important;
+}
+
+.sr-only {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+ion-card {
+  --ion-item-background: #fff;
+}
+
+ion-card ion-card-content.card-content {
+  padding: 25px;
+}
+
+ion-card.card-st1 {
+  margin: 0 0 40px 0;
+  padding: 0;
+  border-radius: 0 25px 0 25px;
+  -webkit-box-shadow: 0 8px 19px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 8px 19px rgba(0, 0, 0, 0.15);
+}
+
+ion-card.card-st1 ion-card-header {
+  padding: 25px;
+  --ion-color-secondary: linear-gradient(120deg, #05a2be, #0ecea7);
+}
+
+ion-card.card-st1 ion-card-header.ion-color-secondary * {
+  color: #fff;
+}
+
+ion-card.card-st1 ion-card-header ion-card-title {
+  margin: -25px;
+  padding: 15px 25px;
+  font-weight: 500;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+ion-card.card-st1 ion-card-content {
+  padding: 25px;
+}
+
+ion-card.card-st1 .card-footer {
+  padding: 0;
+}
+
+ion-card.card-st1 .card-footer ion-button {
+  --background: var(--ion-color-primary);
+  --background-activated: var(--ion-color-primary);
+  height: 50px;
+  font-weight: 350;
+  font-size: 16px;
+  --ion-color-primary: #fff;
+  --ion-color-primary-contrast: #05a2be;
+  --ion-color-secondary: linear-gradient(120deg, #05a2be, #0ecea7);
+  border-top: 1px solid #ddd;
+}
+
+ion-card.card-st1 .card-footer ion-button.ion-color-secondary {
+  --background: var(--ion-color-secondary);
+  --background-activated: var(--ion-color-secondary);
+  border-top: 0;
+}
+
+ion-card.card-st2 {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-radius: 25px;
+}
+
+ion-card.card-st3 {
+  overflow: inherit;
+  margin: 0 -20px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: transparent;
+}
+
+ion-card.card-st3 ion-card-header {
+  --color: #222;
+  padding-top: 28px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  background: transparent;
+}
+
+ion-card.card-st3 ion-card-content {
+  padding: 24px 20px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+ion-card.card-st3:first-of-type ion-card-header {
+  padding-top: 0;
+}
+
+.dl-st1 {
+  font-size: 16px;
+}
+
+.dl-st1::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.dl-st1 + .dl-st1 {
+  margin-top: 14px;
+}
+
+.dl-st1 dt {
+  float: left;
+  font-weight: 350;
+  color: #666;
+}
+
+.dl-st1 dd {
+  color: #222;
+  text-align: right;
+}
+
+.form-group ion-button {
+  height: 40px;
+}
+
+.form-group .form-grid {
+  padding: 0;
+}
+
+.form-group .form-grid ion-row + ion-row {
+  margin-top: 40px;
+}
+
+.form-group .form-grid ion-col {
+  padding: 0;
+}
+
+.form-group ion-item {
+  --min-height: inherit;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --border-width: 0;
+}
+
+.form-group ion-item.item-has-value {
+  --border-color: #000;
+}
+
+.form-group ion-item.item-has-focus {
+  --border-color: #0ecea7;
+}
+
+.form-group ion-item.item-interactive-disabled {
+  --color: #222;
+  --inner-border-width: 0;
+  opacity: 1;
+}
+
+.form-group ion-item.item-interactive-disabled ion-label {
+  opacity: 1;
+}
+
+.form-group ion-item.item-interactive-disabled ion-input {
+  --color: #222;
+  background: #ddd;
+}
+
+.form-group ion-item.item-has-errors {
+  --color: #ee1c25;
+  --border-color: #ee1c25;
+}
+
+.form-group ion-item.item-checkbox, .form-group ion-item.item-radio {
+  --inner-border-width: 0;
+}
+
+.form-group [class*='validation-'] [class*='-message'] {
+  margin-top: 8px;
+  padding-left: 20px;
+  font-weight: 350;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 15px auto;
+}
+
+.form-group .validation-errors .error-message {
+  color: #ee1c25;
+  background-image: url(/static/images/ico_error.png);
+}
+
+.form-group .validation-info .info-message {
+  background-image: url(/static/images/ico_info.png);
+}
+
+.form-group .form-label {
+  display: block;
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 350;
+  font-size: 14px;
+  color: #999;
+}
+
+.form-group .form-input {
+  --padding-top: 5px;
+  --padding-bottom: 4px;
+  font-weight: 350;
+  font-size: 21px;
+}
+
+.form-group .form-select {
+  --padding-top: 4px;
+  --padding-end: 3px;
+  --padding-bottom: 5px;
+  --padding-start: 0;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  font-size: 21px;
+  font-weight: 350;
+  color: #222;
+}
+
+.form-group .item-checkbox ion-checkbox {
+  --border-radius: 0;
+  --border-width: 1px;
+  --border-color: #999;
+  --border-color-checked: transparent;
+  --size: 20px;
+  --checkmark-color: transparent;
+  --background-checked: #05a2be url('/static/images/ico_chk.png') no-repeat 0 0 / 100% auto;
+  margin-right: 10px;
+}
+
+.form-group .item-checkbox ion-checkbox.checkbox-checked {
+  --border-width: 0;
+}
+
+.form-group .item-checkbox ion-checkbox.checkbox-checked.checkbox-disabled {
+  --border-width: 1px;
+  --border-color-checked: #999;
+  --background-checked: #ddd url('/static/images/ico_chk_disabled.png') no-repeat 0 0 / 100% auto;
+}
+
+.form-group .item-checkbox ion-checkbox.checkbox-disabled {
+  --background: #ddd;
+  opacity: 1;
+}
+
+.form-group .item-radio ion-radio {
+  width: 20px;
+  height: 20px;
+  margin: 12px 10px 10px 0;
+  border: 1px solid #999;
+  border-radius: 50%;
+  opacity: 1;
+  --color-checked: transparent;
+}
+
+.form-group .item-radio ion-radio.radio-checked {
+  position: relative;
+}
+
+.form-group .item-radio ion-radio.radio-checked::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 50%;
+  background-color: #05a2be;
+}
+
+.form-group .item-radio ion-radio.radio-disabled {
+  background: #ddd;
+}
+
+.form-group .item-radio ion-radio.radio-disabled::before {
+  background-color: #bbb;
+}
+
+.form-group ion-textarea {
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-end: 0;
+  height: 165px;
+  padding: 15px;
+  font-weight: 350;
+  font-size: 14px;
+  color: #666;
+  background: #f0f2f2;
+}
+
+.select-action-sheet .action-sheet-container {
+  position: relative;
+  padding: 0;
+}
+
+.select-action-sheet .action-sheet-group {
+  position: relative;
+  max-height: 195px;
+  margin: 0 0 40px 0 !important;
+  padding: 0 25px;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.select-action-sheet .action-sheet-group::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 41px;
+  margin-left: -25px;
+  background-color: #fff;
+}
+
+.select-action-sheet .action-sheet-group .action-sheet-title {
+  position: fixed;
+  width: 100%;
+  height: 91px;
+  margin: -90px 0 0 -25px;
+  padding: 34px 0 0 0;
+  font-weight: 500;
+  font-size: 21px;
+  color: #222;
+  border: 0;
+  border-radius: 25px 25px 0 0;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.select-action-sheet .action-sheet-group .action-sheet-button {
+  text-align: left;
+  min-height: 20px;
+  height: auto;
+  contain: content;
+  padding: 0 20px 0 45px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 350;
+  color: #999;
+  border: 0;
+}
+
+.select-action-sheet .action-sheet-group .action-sheet-button.activated {
+  margin-top: 0;
+  color: #222;
+  border: 0;
+  background: transparent url("/static/images/ico_select_chk.png") no-repeat 20px 50%/15px auto;
+}
+
+.select-action-sheet .action-sheet-group .action-sheet-button .action-sheet-button-inner {
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+}
+
+.select-action-sheet .action-sheet-group-cancel {
+  display: none;
+}
+
+.tab-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -30px -20px 0;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  -webkit-box-shadow: 0 8px 19px rgba(0, 30, 30, 0.15);
+          box-shadow: 0 8px 19px rgba(0, 30, 30, 0.15);
+}
+
+.tab-main li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.tab-main li a {
+  display: block;
+  width: 100%;
+  padding: 11px 0;
+  font-size: 20px;
+  letter-spacing: -0.06rem;
+  color: #888;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tab-main li.active {
+  border-bottom: 3px solid #222;
+}
+
+.tab-main li.active a {
+  color: #222;
+}
+
+.tab-main-cont.off {
+  display: none;
+}
+
+.tab-sub-cont.off {
+  display: none;
+}
+
+ion-tabs[class*='tabs-st'] ion-tab-bar {
+  --border: 0;
+  --background: #fff;
+  border-top: 1px solid #ddd;
+  -webkit-box-shadow: 0 8px 19px rgba(0, 30, 30, 0.15);
+          box-shadow: 0 8px 19px rgba(0, 30, 30, 0.15);
+}
+
+ion-tabs[class*='tabs-st'] ion-tab-bar ion-tab-button.tab-selected {
+  border-bottom: 3px solid #222;
+}
+
+ion-tabs[class*='tabs-st'] ion-tab-bar ion-tab-button.tab-selected ion-label {
+  margin-top: 5px;
+  font-weight: 500;
+  color: #222;
+}
+
+ion-tabs[class*='tabs-st'] ion-tab-bar ion-tab-button ion-label {
+  display: block;
+  font-weight: 350;
+  font-size: 20px;
+}
+
+ion-tabs[class*='tabs-st'] ion-tab {
+  display: block;
+  overflow-y: scroll;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  padding: 0 20px;
+}
+
+ion-tabs[class*='tabs-st'] ion-tab .page-btn {
+  position: relative;
+  margin: 0 -20px;
+}
+
+ion-tabs.tabs-st2 ion-tab-bar {
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+ion-tabs.tabs-st2 ion-tab-bar::-webkit-scrollbar {
+  display: none;
+}
+
+ion-tabs.tabs-st2 ion-tab-button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 0 15px;
+}
+
+.modal-pub .modal-short {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  contain: strict;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.modal-pub .modal-short .modal-wrapper {
+  position: relative;
+  background-color: #fff;
+}
+
+ion-modal.modal .modal-header ion-toolbar, .modal .modal-header ion-toolbar {
+  --padding-top: 12px;
+  --padding-bottom: 0;
+  height: 65px;
+  padding: 0 20px;
+  --border-color: #ddd;
+}
+
+ion-modal.modal .modal-header ion-toolbar ion-buttons, .modal .modal-header ion-toolbar ion-buttons {
+  --min-height: inherit;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+ion-modal.modal .modal-header ion-toolbar ion-buttons .btn-close, .modal .modal-header ion-toolbar ion-buttons .btn-close {
+  --padding-start: 0;
+  --padding-end: 0;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  background: url("/static/images/btn_close.png") no-repeat 0 0/100% auto;
+}
+
+ion-modal.modal .modal-header ion-toolbar ion-title, .modal .modal-header ion-toolbar ion-title {
+  top: auto;
+  height: auto;
+  padding: 0;
+  font-weight: 500;
+  font-size: 25px;
+  text-align: inherit;
+}
+
+ion-modal.modal ion-content, .modal ion-content {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --background: #f0f2f2;
+}
+
+ion-modal.modal ion-content.modal-cont2, .modal ion-content.modal-cont2 {
+  --background: transparent;
+}
+
+ion-modal.modal ion-content .container, .modal ion-content .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+ion-modal.modal ion-content .container .cont-body, .modal ion-content .container .cont-body {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+ion-modal.modal ion-content .container .page-btn, .modal ion-content .container .page-btn {
+  margin-left: -20px;
+  margin-right: -20px;
+  z-index: 1;
+}
+
+ion-modal.modal-short, .modal-short {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+ion-modal.modal-short .modal-wrapper, .modal-short .modal-wrapper {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  border-radius: 25px 25px 0 0;
+}
+
+ion-modal.modal-short .modal-wrapper modal-content, .modal-short .modal-wrapper modal-content {
+  position: static;
+  display: block;
+  padding: 40px 50px;
+  text-align: center;
+  contain: inherit;
+}
+
+ion-modal.modal-short .modal-wrapper modal-content .error-message, .modal-short .modal-wrapper modal-content .error-message {
+  text-align: left;
+}
+
+ion-modal.modal-short .modal-wrapper .modal-header, .modal-short .modal-wrapper .modal-header {
+  margin-bottom: 28px;
+}
+
+ion-modal.modal-short .modal-wrapper .modal-header .modal-tl, .modal-short .modal-wrapper .modal-header .modal-tl {
+  font-size: 21px;
+}
+
+ion-modal.modal-short .modal-wrapper .modal-sub-tl, .modal-short .modal-wrapper .modal-sub-tl {
+  margin-bottom: 30px;
+  font-weight: 350;
+  font-size: 18px;
+}
+
+ion-modal.modal-short .modal-wrapper .modal-sub-text, .modal-short .modal-wrapper .modal-sub-text {
+  margin-top: -7px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+  font-weight: 350;
+}
+
+ion-modal.modal-short .modal-wrapper .modal-btn-group, .modal-short .modal-wrapper .modal-btn-group {
+  margin-top: 40px;
+  font-size: 0;
+}
+
+ion-modal.modal-short .modal-wrapper .modal-btn-group ion-button, .modal-short .modal-wrapper .modal-btn-group ion-button {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  font-weight: 350;
+}
+
+ion-modal.modal-short .modal-wrapper .modal-btn-group ion-button + ion-button, .modal-short .modal-wrapper .modal-btn-group ion-button + ion-button {
+  margin-left: 10px;
+}
+
+ion-modal.modal-short .modal-wrapper .btn-st1, .modal-short .modal-wrapper .btn-st1 {
+  --background: #999;
+  --background-activated: #999;
+}
+
+ion-modal.modal-short .modal-wrapper .btn-st2, .modal-short .modal-wrapper .btn-st2 {
+  --background: #222;
+  --background-activated: #222;
+}
+
+ion-button {
+  --padding: 0;
+  --border-radius: 0;
+  --background: transparent;
+  --background-activated: transparent;
+  --box-shadow: none;
+  margin: 0;
+  height: 45px;
+  font-weight: 350;
+  font-size: 18px;
+}
+
+ion-button.btn-st1 {
+  background: #05a2be;
+}
+
+ion-button.btn-st2 {
+  background: #bbb;
+}
+
+ion-button.btn-st3 {
+  background: -webkit-gradient(linear, left top, right top, from(#05a2be), to(#0ecea7));
+  background: linear-gradient(90deg, #05a2be, #0ecea7);
+}
+
+ion-button.btn-st4 {
+  border: 1px solid #888;
+}
+
+ion-button.btn-st4, ion-button.button-outline {
+  --color: #222;
+  --color-activated: #222;
+  --border-color: #888;
+  --ion-color-primary: #fff;
+  --ion-color-primary-shade: #fff;
+  --background: #fff;
+  --background-activated: #fff;
+}
+
+ion-button.button-disabled {
+  --border-width: 0;
+  --opacity: 1;
+  background: #bbb;
+  color: #888;
+  border: 0;
+}
+
+ion-button.button-clear {
+  --ion-color-primary: #222;
+  --padding-start: 0;
+  --padding-end: 0;
+  text-decoration: underline;
+}
+
+ion-button.btn-refresh {
+  --padding-start: 17px;
+  --padding-end: 0;
+  height: inherit;
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  text-decoration: none;
+  background: url("/static/images/btn_reset.png") no-repeat 0 50%/13px auto;
+}
+
+.page-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
+  -webkit-box-shadow: 0 -10px 15px rgba(0, 30, 30, 0.15);
+          box-shadow: 0 -10px 15px rgba(0, 30, 30, 0.15);
+}
+
+.page-btn ion-button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 60px;
+  margin: 0;
+  font-weight: 350;
+  font-size: 21px;
+}
+
+.page-btn.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.btn-sch {
+  --background: transparent;
+  --background-activated: transparent;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 25px;
+  height: 25px !important;
+  margin-bottom: 7px;
+  background: url("/static/images/btn_sch.png") no-repeat 0 0/100% auto;
+}
+
+ion-alert[class*='alert'] {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+ion-alert[class*='alert'] .alert-wrapper {
+  width: 100%;
+  min-width: inherit;
+  max-width: inherit;
+  padding: 40px 20px 40px;
+  border-radius: 25px 25px 0 0;
+}
+
+ion-alert[class*='alert'] .alert-wrapper .alert-head {
+  height: auto;
+  padding: 0 0 30px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ion-alert[class*='alert'] .alert-wrapper .alert-head .alert-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 21px;
+  color: #222;
+}
+
+ion-alert[class*='alert'] .alert-wrapper .alert-message {
+  padding-bottom: 40px;
+  font-weight: 350;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+ion-alert[class*='alert'] .alert-wrapper .alert-message a {
+  display: inline-block;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+ion-alert[class*='alert'] .alert-wrapper .alert-message .msg2 {
+  margin-top: -30px;
+}
+
+ion-alert[class*='alert'] .alert-button-group {
+  display: block;
+  text-align: center;
+}
+
+ion-alert[class*='alert'] .alert-button-group .alert-button {
+  display: inline-block;
+  min-width: 100px;
+  height: 40px;
+  padding: 0 15px;
+  font-weight: 350 !important;
+  font-size: 16px;
+  color: #fff;
+  border: 0;
+}
+
+ion-alert[class*='alert'] .alert-button-group .alert-button + .alert-button {
+  margin-left: 10px;
+}
+
+ion-alert[class*='alert'] .alert-button-group .btn-st1 {
+  background-color: #999;
+}
+
+ion-alert[class*='alert'] .alert-button-group .btn-st2 {
+  background-color: #222;
+}
+
+ion-alert.alert2 .alert-wrapper .alert-head {
+  padding: 0;
+}
+
+ion-toast {
+  --border-radius: 20px;
+  --color: #fff;
+  --background: #000;
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 10px;
+  text-align: center;
+  opacity: .8;
+}
+
+ion-toast.toast-line2 {
+  --border-radius: 30px;
+  line-height: 15px;
+}
+
+ion-popover[class*='popover-'] .popover-arrow {
+  display: none;
+}
+
+ion-popover[class*='popover-'] .popover-content {
+  left: 0 !important;
+  width: 100%;
+  margin-top: -25px;
+  padding: 33px 20px 20px;
+  background: transparent !important;
+  border-radius: 0;
+}
+
+ion-popover[class*='popover-'] .popover-cont {
+  padding: 16px 20px;
+  font-weight: 350;
+  font-size: 14px;
+  letter-spacing: -0.03rem;
+  color: #fff;
+  border-radius: 15px;
+  background: rgba(5, 162, 190, 0.9);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+ion-popover[class*='popover-'] .btn-close {
+  --padding-start: 0;
+  --padding-end: 0;
+  --border-radius: 50%;
+  --background: #05a2be url('/static/images/is/btn_popover_close.png') 50% 50% / 100% auto;
+  --background-activated: #05a2be url('/static/images/is/btn_popover_close.png') 50% 50% / 100% auto;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 27px;
+  height: 27px;
+}
+
+.list-st1 {
+  margin: 0 -20px;
+  background: transparent;
+}
+
+.list-st1 ion-list-header {
+  padding: 0 20px 5px;
+  font-size: 18px;
+  letter-spacing: -0.0125em;
+}
+
+.list-st1 ion-item.item {
+  --min-height: 65px;
+  --padding-start: 0;
+  --inner-padding-start: 20px;
+  --inner-padding-end: 20px;
+  --inner-padding-top: 16px;
+  --inner-padding-bottom: 16px;
+  --border-color: #ddd;
+  --background: #fff;
+  font-size: 16px;
+}
+
+.list-st1 ion-item.item.ion-activatable {
+  --inner-padding-end: 50px;
+  --background: #fff url('/static/images/ico_list_arr.png') no-repeat right 20px top 50% / auto 10px;
+  --ion-item-background-activated: #fff url('/static/images/ico_list_arr.png') no-repeat right 20px top 50% / auto 10px;
+}
+
+.list-st1 ion-item.item ion-label {
+  margin: 0;
+  font-size: 16px;
+}
+
+.list-st1 ion-item.item .title {
+  display: block;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.0125em;
+}
+
+.list-type1 li {
+  position: relative;
+  font-weight: 350;
+  font-size: 16px;
+}
+
+.list-type1 li::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.list-type1 > li {
+  padding-left: 15px;
+}
+
+.list-type1 > li::before {
+  top: 12px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #222;
+}
+
+.list-type1 > li + li {
+  margin-top: 10px;
+}
+
+.list-type1 > li li {
+  padding-left: 14px;
+}
+
+.list-type1 > li > ul {
+  margin-top: 18px;
+}
+
+.list-type1 > li > ul > li::before {
+  top: 12px;
+  left: 1px;
+  width: 6px;
+  height: 1px;
+  background-color: #222;
+}
+
+.list-type1 > li > ul > li ul {
+  margin-top: 23px;
+}
+
+.list-type1 > li > ul > li li {
+  font-size: 14px;
+}
+
+.list-type1 > li > ul > li li::before {
+  top: 9px;
+  left: 1px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 1px solid #888;
+}
+
+.caution {
+  position: relative;
+  padding-left: 15px;
+  font-weight: 350;
+  font-size: 14px;
+  color: #666;
+}
+
+.caution::before {
+  content: '\203b';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* 아코디언 */
+.accordion {
+  margin: 0 -20px;
+}
+
+.accordion .accordion-item {
+  --padding-start: 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion .accordion-item.on .icon:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.accordion .accordion-item.on .icon:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.accordion .accordion-item.on .accordion-content {
+  max-height: 2000px;
+  overflow: auto;
+  -webkit-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+}
+
+.accordion .accordion-item .accordion-title {
+  padding: 0 20px;
+}
+
+.accordion .accordion-item .accordion-title ion-label {
+  padding-top: 28px;
+  padding-bottom: 8px;
+  margin: 0;
+  --color: #222;
+  font-size: 18px;
+  line-height: 22px;
+  background: transparent;
+}
+
+.accordion .accordion-item .accordion-title .icon {
+  position: absolute;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+.accordion .accordion-item .accordion-title .icon:before, .accordion .accordion-item .accordion-title .icon:after {
+  content: "";
+  position: absolute;
+  background-color: #222;
+  -webkit-transition: -webkit-transform 0.1s ease-out;
+  transition: -webkit-transform 0.1s ease-out;
+  transition: transform 0.1s ease-out;
+  transition: transform 0.1s ease-out, -webkit-transform 0.1s ease-out;
+}
+
+.accordion .accordion-item .accordion-title .icon:before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  margin-left: -1px;
+}
+
+.accordion .accordion-item .accordion-title .icon:after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.accordion .accordion-item .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.25s;
+  transition: max-height 0.25s;
+  --padding-start: 20px;
+  --padding-end: 0px;
+  --inner-padding-end: 20px;
+  --background: #fff;
+}
+
+.health {
+  --ft-c-222: #222;
+  --ft-c-222-rgb: 34, 34, 34;
+  --ft-c-666: #666;
+  --ft-c-666-rgb: 102, 102, 102;
+  --ft-c-888: #888;
+  --ft-c-888-rgb: 136, 136, 136;
+  --ft-c-999: #999;
+  --ft-c-999-rgb: 153, 153, 153;
+  --bg-c-bg: #f0f2f2;
+  --bg-c-bg-rgb: 240, 242, 242;
+  --bg-c-line: #ddd;
+  --bg-c-line-rgb: 221, 221, 221;
+  --bg-c-btn: #bbb;
+  --bg-c-btn-rgb: 187, 187, 187;
+  --key-c-222: #222;
+  --key-c-222-rgb: 34, 34, 34;
+  --key-c-b: #05a2be;
+  --key-c-b-rgb: 5, 162, 190;
+  --key-c-g: #0ecea7;
+  --key-c-g-rgb: 14, 206, 167;
+  --key-c-fff: #fff;
+  --key-c-fff-rgb: 255, 255, 255;
+  --ht-c-g: #0ecea7;
+  --ht-c-g-rgb: 14, 206, 167;
+  --ht-c-o: #fc880a;
+  --ht-c-o-rgb: 252, 136, 10;
+  --ht-c-r: #f84646;
+  --ht-c-r-rgb: 248, 70, 70;
+  /* 서브메인 공통*/
+  /* 생활습관 입력 공통 */
+  /* input 공통 */
+}
+
+.health ion-badge {
+  min-width: 45px;
+  height: 20px;
+  padding: 0 5px;
+  line-height: 20px;
+  border-radius: 2px;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.health ion-badge.badge-green {
+  background: var(--ht-c-g);
+}
+
+.health ion-badge.badge-orange {
+  background: var(--ht-c-o);
+}
+
+.health ion-badge.badge-red {
+  background: var(--ht-c-r);
+}
+
+.health ion-badge.badge-outline {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 20px;
+  line-height: 18px;
+}
+
+.health .toggle-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  height: 25px;
+  background: var(--bg-c-line);
+  border-radius: 25px;
+}
+
+.health .toggle-area .toggle {
+  display: inline-block;
+  width: 100%;
+}
+
+.health .toggle-area .toggle input {
+  opacity: 0;
+  position: absolute;
+  margin: 0;
+}
+
+.health .toggle-area .toggle input:checked ~ label {
+  background: #222;
+  color: #fff;
+}
+
+.health .toggle-area .toggle label {
+  position: relative;
+  display: block;
+  min-width: 40px;
+  padding: 0 9px;
+  text-align: center;
+  background: transparent;
+  height: 25px;
+  line-height: 23px;
+  font-size: 13px;
+  font-weight: 350;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.health .toggle-area .toggle label:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  -webkit-transition: all 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: all 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  border-radius: 25px;
+}
+
+.health .toggle-area .toggle:nth-child(1) label:before {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.health .toggle-area .toggle:nth-child(1) input:checked ~ label {
+  background: transparent;
+  z-index: 1;
+  -webkit-box-shadow: 0 10px 15px rgba(0, 30, 30, 0.15);
+          box-shadow: 0 10px 15px rgba(0, 30, 30, 0.15);
+}
+
+.health .toggle-area .toggle:nth-child(1) input:checked ~ label:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  background: #222;
+  z-index: -1;
+}
+
+.health .toggle-area .toggle:nth-child(2) label:before {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.health .toggle-area .toggle:nth-child(2) input:checked ~ label {
+  background: transparent;
+  z-index: 1;
+  -webkit-box-shadow: 0 10px 15px rgba(0, 30, 30, 0.15);
+          box-shadow: 0 10px 15px rgba(0, 30, 30, 0.15);
+}
+
+.health .toggle-area .toggle:nth-child(2) input:checked ~ label:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  background: #222;
+  z-index: -1;
+}
+
+.health .cont-header .text-area .text {
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 350;
+  color: #222;
+}
+
+.health .cont-header .text-area .btn-clear {
+  height: 16px;
+  --padding-start: 0;
+  --padding-end: 0;
+  margin-top: 28px;
+  line-height: 16px;
+  vertical-align: top;
+  font-size: 14px;
+  font-weight: 350;
+  color: #222;
+}
+
+.health .cont-header .btn-select {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 100%;
+  height: 35px;
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+  --padding-start: 16px;
+  --padding-end: 43px;
+  line-height: 35px;
+  --border-radius: 35px;
+  font-size: 16px;
+  letter-spacing: -0.015em;
+  color: #fff;
+  font-weight: 350;
+  --background: linear-gradient(90deg, #05a2be, #0ecea7);
+  --background-activated: linear-gradient(90deg, #05a2be, #0ecea7);
+}
+
+.health .cont-header .btn-select:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/static/images/ht/arw_white_bottom.png") no-repeat top 55% right 15px/14px auto;
+  z-index: 1;
+}
+
+.health .cont-body .title-area {
+  margin-bottom: 32px;
+}
+
+.health .cont-body .title-area .text {
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.health .cont-body .main-card ion-card-title {
+  color: #222;
+  font-size: 0;
+  background: url("/static/images/arw_black.png") no-repeat right 25px top 50%/8px auto;
+}
+
+.health .cont-body .main-card ion-card-title dl {
+  height: 24px;
+  line-height: 24px;
+}
+
+.health .cont-body .main-card ion-card-title dl dt {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.health .cont-body .main-card ion-card-title dl dd {
+  display: inline-block;
+  margin-left: 15px;
+  font-weight: 350;
+  font-size: 16px;
+}
+
+.health .cont-body .main-card ion-card-title dl dd .age {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.health .cont-body .main-card.result-null ion-card-content {
+  text-align: center;
+  padding: 30px 0 27px;
+}
+
+.health .cont-body .main-card ion-card-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.health .cont-body .main-card ion-card-content ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.health .cont-body .main-card ion-card-content ul li .chart {
+  margin: 5px auto;
+  /* img 태그 임시 (삭제 가능) */
+}
+
+.health .cont-body .main-card ion-card-content ul li .chart img {
+  width: 110px;
+  margin: 0 auto;
+}
+
+.health .cont-body .main-card ion-card-content ul li dl {
+  padding-top: 4px;
+}
+
+.health .cont-body .main-card ion-card-content ul li dl dt {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 350;
+  letter-spacing: -0.015em;
+  color: #737373;
+}
+
+.health .cont-body .main-card ion-card-content ul li dl dd {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: #ee5353;
+}
+
+.health .cont-body .main-card ion-card-content .img-area {
+  width: 162px;
+  height: 162px;
+  margin: 0 auto;
+}
+
+.health .cont-body .main-card ion-card-content .text-area {
+  margin-top: 16px;
+}
+
+.health .cont-body .main-card ion-card-content .text-area .text {
+  font-size: 16px;
+  font-weight: 350;
+  line-height: 22px;
+  color: #222;
+}
+
+.health .cont-body .main-card .card-footer ion-button .text {
+  margin-left: 28px;
+  font-weight: 500;
+}
+
+.health .cont-body .main-card .card-footer ion-button .arrow {
+  display: block;
+  margin-left: 5px;
+}
+
+.health .cont-body .main-card .card-footer ion-button .arrow span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: -4px;
+  border-radius: 1px;
+  -webkit-animation: arrow-animate 1.4s infinite;
+          animation: arrow-animate 1.4s infinite;
+}
+
+.health .cont-body .main-card .card-footer ion-button .arrow span:nth-child(2) {
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+}
+
+.health .cont-body .main-card .card-footer ion-button .arrow span:nth-child(3) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+.health .question-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: -35px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  line-height: 24px;
+  border-radius: 70px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background: #05a2be;
+  text-align: center;
+  z-index: 11;
+}
+
+.health .question-list {
+  margin-top: 26px;
+}
+
+.health .question-list li {
+  margin-bottom: 41px;
+}
+
+.health .question-list li .num {
+  font-size: 30px;
+  line-height: 36px;
+  color: #05a2be;
+  font-weight: 700;
+}
+
+.health .question-list li .question {
+  margin-top: 4px;
+  margin-bottom: 28px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #222;
+  font-weight: 500;
+}
+
+.health .question-list li .question .sub-text {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 350;
+  color: #666;
+}
+
+.health .question-list li .question-radio .radio-item {
+  margin-top: 15px;
+  --border-color: var(--bg-c-line);
+  --border-width: 1px;
+  --border-radius: 14px;
+  --transition: none;
+  --padding-start: 24px;
+  --inner-padding-bottom: 22px;
+  --inner-padding-top: 22px;
+}
+
+.health .question-list li .question-radio .radio-item .radio-btn {
+  width: 20px;
+  height: 20px;
+  margin: 0 11px auto 0;
+  --color-checked: transparent;
+  background: var(--bg-c-line) url("/static/images/ht/ico_radio_gray.png") no-repeat 0 0/100% auto;
+  border-radius: 20px;
+}
+
+.health .question-list li .question-radio .radio-item .radio-btn.radio-checked {
+  background: #05a2be url("/static/images/ht/ico_radio_white.png") no-repeat 0 0/100% auto;
+}
+
+.health .question-list li .question-radio .radio-item .radio-label {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 350;
+  color: #222;
+}
+
+.health .question-list li .question-radio .radio-item.item-radio-checked {
+  --background: #fff;
+  --border-color: #fff;
+  --box-shadow: 0 8px 19px rgba(0, 0, 0, 0.15);
+}
+
+.health .question-list li .question-radio .radio-item.item-radio-checked .radio-label {
+  color: #05a2be;
+  font-weight: 500;
+}
+
+.health .question-list li .question-card ion-card-content ion-grid {
+  padding: 12px 0 10px;
+}
+
+.health .question-list .input-after {
+  position: absolute;
+  bottom: 7px;
+  right: 0;
+  font-size: 16px;
+  font-weight: 350;
+  color: #999;
+}
+
+.health .form-group .form-item.item-has-focus .form-label {
+  color: #999;
+}
+
+.health .form-group .form-item.item-has-errors .form-label {
+  color: #ee1c25;
+}
+
+.health .form-group .form-item .form-label {
+  color: #222;
+  font-weight: 350;
+}
+
+@-webkit-keyframes arrow-animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(135deg) translate(5px, 5px);
+            transform: rotate(135deg) translate(5px, 5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(135deg) translate(-5px, -5px);
+            transform: rotate(135deg) translate(-5px, -5px);
+  }
+}
+
+@keyframes arrow-animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(135deg) translate(5px, 5px);
+            transform: rotate(135deg) translate(5px, 5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(135deg) translate(-5px, -5px);
+            transform: rotate(135deg) translate(-5px, -5px);
+  }
+}
+
+.insurance {
+  --ft-c-222: #222;
+  --ft-c-222-rgb: 34, 34, 34;
+  --ft-c-666: #666;
+  --ft-c-666-rgb: 102, 102, 102;
+  --ft-c-888: #888;
+  --ft-c-888-rgb: 136, 136, 136;
+  --ft-c-999: #999;
+  --ft-c-999-rgb: 153, 153, 153;
+  --bg-c-bg: #f0f2f2;
+  --bg-c-bg-rgb: 240, 242, 242;
+  --bg-c-line: #ddd;
+  --bg-c-line-rgb: 221, 221, 221;
+  --bg-c-btn: #bbb;
+  --bg-c-btn-rgb: 187, 187, 187;
+  --key-c-222: #222;
+  --key-c-222-rgb: 34, 34, 34;
+  --key-c-b: #05a2be;
+  --key-c-b-rgb: 5, 162, 190;
+  --key-c-g: #0ecea7;
+  --key-c-g-rgb: 14, 206, 167;
+  --key-c-fff: #fff;
+  --key-c-fff-rgb: 255, 255, 255;
+  --is-c-y: #fdcb32;
+  --is-c-y-rgb: 253, 203, 50;
+  --is-c-r: #ee5353;
+  --is-c-r-rgb: 238, 83, 83;
+  --is-c-g: #7fda5f;
+  --is-c-g-rgb: 127, 218, 95;
+  --is-c-b: #53c8ee;
+  --is-c-b-rgb: 83, 200, 238;
+  --is-c-p: #ee87d5;
+  --is-c-p-rgb: 238, 135, 213;
+  --is-c-gr: #ededed;
+  --is-c-gr-rgb: 237, 237, 237;
+  --is-c-null: transparent;
+  /* 연금조회 */
+  /* 보험조회 */
+  /* 보험상담 */
+  /* 보장분석 */
+}
+
+.insurance .badge-area {
+  font-size: 0;
+  display: block;
+}
+
+.insurance .badge-area::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.insurance .badge-area .badge-category {
+  float: left;
+}
+
+.insurance .badge-area .badge-status {
+  float: right;
+}
+
+.insurance ion-badge {
+  min-width: 43px;
+  padding: 0 5px;
+  margin-left: 5px;
+  line-height: 20px;
+  border-radius: 2px;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.insurance ion-badge:first-child {
+  margin-left: 0;
+}
+
+.insurance ion-badge.badge-yellow {
+  background: #fc880a;
+}
+
+.insurance ion-badge.badge-red {
+  background: #f84646;
+}
+
+.insurance ion-badge.badge-green {
+  background: #0ece76;
+}
+
+.insurance ion-badge.badge-blue {
+  background: var(--is-c-b);
+}
+
+.insurance ion-badge.badge-pink {
+  background: var(--is-c-p);
+}
+
+.insurance ion-badge.badge-purple {
+  background: #de78c5;
+}
+
+.insurance ion-badge.badge-outline {
+  background: transparent;
+  border: 1px solid var(--ft-c-222);
+  min-width: 45px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 20px;
+  line-height: 18px;
+  color: var(--ft-c-222);
+}
+
+.insurance ion-badge.badge-consult-b {
+  background: #37b6df;
+  color: #fff;
+}
+
+.insurance ion-badge.badge-consult-g {
+  background: #0ece76;
+  color: #fff;
+}
+
+.insurance ion-badge.badge-consult-g2 {
+  background: var(--key-c-g);
+  color: #fff;
+}
+
+.insurance ion-badge.badge-consult-bl {
+  background: var(--key-c-222);
+  color: #fff;
+}
+
+.insurance ion-badge.badge-consult-r {
+  background: #f84646;
+  color: #fff;
+}
+
+.insurance ion-badge.badge-consult-r2 {
+  background: var(--is-c-r);
+  color: #fff;
+}
+
+.insurance ion-badge.badge-consult-gr {
+  background: #bbbbbb;
+  color: #fff;
+}
+
+.insurance .premium-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: -7px;
+}
+
+.insurance .premium-category dl {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-size: 0;
+  margin-bottom: 7px;
+}
+
+.insurance .premium-category dl::before {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--is-c-null);
+  content: "";
+}
+
+.insurance .premium-category dl.premium-yellow {
+  --is-c-null: var(--is-c-y);
+}
+
+.insurance .premium-category dl.premium-red {
+  --is-c-null: var(--is-c-r);
+}
+
+.insurance .premium-category dl.premium-green {
+  --is-c-null: var(--is-c-g);
+}
+
+.insurance .premium-category dl.premium-blue {
+  --is-c-null: var(--is-c-b);
+}
+
+.insurance .premium-category dl.premium-pink {
+  --is-c-null: var(--is-c-p);
+}
+
+.insurance .premium-category dl dt {
+  display: inline-block;
+  margin-left: 4.5px;
+  font-weight: 350;
+  font-size: 16px;
+  color: var(--ft-c-666);
+}
+
+.insurance .premium-category dl dd {
+  display: inline-block;
+  margin-left: 9px;
+  font-size: 16px;
+  color: var(--ft-c-666);
+}
+
+.insurance .premium-category dl dd .price {
+  font: 500 17px "Roboto", "NotoSansKR";
+  color: var(--ft-c-222);
+}
+
+.insurance .disabled ion-badge {
+  background: var(--is-c-gr);
+  color: var(--ft-c-999);
+}
+
+.insurance .disabled .badge-outline {
+  border-color: var(--ft-c-999);
+  background: transparent;
+}
+
+.insurance .disabled .is-co-logo img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.insurance .disabled.is-card .is-info .is-co {
+  color: var(--ft-c-999);
+}
+
+.insurance .disabled.is-card .is-info .is-name {
+  color: var(--ft-c-999);
+}
+
+.insurance .disabled.is-card .is-info .is-price {
+  color: var(--ft-c-999);
+}
+
+.insurance .disabled.is-card .is-info .is-period {
+  color: var(--ft-c-999);
+}
+
+.insurance .disabled.is-card .is-info .is-insured {
+  color: var(--ft-c-999);
+}
+
+.insurance .star-rating-s {
+  display: inline-block;
+  height: 14px;
+  overflow: hidden;
+  background: url("/static/images/is/ico_rating.png") no-repeat;
+  background-size: 85px auto;
+  width: 85px;
+}
+
+.insurance .star-rating-s span {
+  display: inline-block;
+  height: 14px;
+  overflow: hidden;
+  background: url("/static/images/is/ico_rating.png") no-repeat;
+  background-size: 85px auto;
+  background-position: left bottom;
+  line-height: 0;
+  vertical-align: top;
+}
+
+.insurance .question.q1 ion-item {
+  --inner-border-width: 0px;
+}
+
+.insurance .question.q1 ion-item ion-radio {
+  margin: 0;
+  background: var(--is-c-b);
+  --color-checked: transparent;
+}
+
+.insurance.pension {
+  /* 연금조회 메인 */
+  /* 연금조회 상세 */
+}
+
+.insurance.pension .top-area {
+  position: relative;
+  font-size: 0;
+}
+
+.insurance.pension .top-area .text {
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 350;
+  color: #222;
+}
+
+.insurance.pension .top-area .text .point {
+  font-weight: 500;
+  color: #05a2be;
+}
+
+.insurance.pension .top-area .text-s {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+  font-weight: 350;
+}
+
+.insurance.pension .top-area .btn-clear {
+  --padding-start: 0px;
+  --padding-end: 0px;
+  height: 16px;
+  margin-top: 7px;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.insurance.pension .top-area .btn-analysis-down {
+  --background: transparent;
+  --background-activated: transparent;
+  height: 20px;
+  padding-right: 25px;
+  font-size: 14px;
+  background: url(/static/images/is/btn_analysis_down.png) no-repeat 100% 50%/15px auto;
+}
+
+.insurance.pension .top-area .btn-area {
+  margin-top: 13px;
+}
+
+.insurance.pension .top-area .btn-area .date {
+  margin-bottom: 3px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 350;
+  color: #222;
+}
+
+.insurance.pension .top-area .btn-info {
+  --padding-start: 0;
+  --padding-end: 0;
+  --background: url('/static/images/is/btn_info.png') no-repeat 0 0 / 100% auto;
+  --background-activated: url('/static/images/is/btn_info.png') no-repeat 0 0 / 100% auto;
+  position: absolute;
+  right: 1px;
+  top: 38px;
+  width: 25px;
+  height: 25px;
+}
+
+.insurance.pension .slide-area {
+  margin-top: 30px;
+}
+
+.insurance.pension .slide-area #mainSlide {
+  overflow: visible;
+}
+
+.insurance.pension .slide-area #mainSlide .swiper-slide {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: calc(100% - 30px);
+  margin: 0 15px;
+}
+
+.insurance.pension .slide-area #mainSlide .swiper-slide:nth-child(1) {
+  margin-left: -15px;
+}
+
+.insurance.pension .slide-area #mainSlide .swiper-slide:nth-child(4) {
+  margin-right: -15px;
+}
+
+.insurance.pension .slide-area #mainSlide ion-card {
+  width: 100%;
+  text-align: left;
+  overflow: initial;
+  margin-bottom: 20px;
+}
+
+.insurance.pension .slide-area #mainSlide ion-card ion-card-header {
+  border-top-right-radius: 25px;
+  height: 181px;
+}
+
+.insurance.pension .slide-area #mainSlide ion-card ion-card-header .title {
+  line-height: 37px;
+  font-weight: 500;
+  font-size: 20px;
+  padding-left: 45px;
+  white-space: nowrap;
+}
+
+.insurance.pension .slide-area #mainSlide ion-card ion-card-header .title.icon1 {
+  background: url("/static/images/IS/ico_pension1.png") no-repeat top 50% left 2px/32px auto;
+}
+
+.insurance.pension .slide-area #mainSlide ion-card ion-card-header .title.icon2 {
+  background: url("/static/images/IS/ico_pension2.png") no-repeat top 50% left 0px/35px auto;
+}
+
+.insurance.pension .slide-area #mainSlide ion-card ion-card-header .title.icon3 {
+  background: url("/static/images/IS/ico_pension3.png") no-repeat top 50% left 3px/30px auto;
+}
+
+.insurance.pension .slide-area #mainSlide ion-card ion-card-header .title.icon4 {
+  background: url("/static/images/IS/ico_pension4.png") no-repeat top 50% left 2px/32px auto;
+}
+
+.insurance.pension .slide-area #mainSlide ion-card ion-card-header .sub-title {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 350;
+  white-space: nowrap;
+}
+
+.insurance.pension .slide-area #mainSlide ion-card ion-card-content .title {
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+}
+
+.insurance.pension .slide-area #mainSlide ion-card ion-card-content .text {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 350;
+  color: #222;
+  white-space: nowrap;
+}
+
+.insurance.pension .slide-pagination {
+  text-align: center;
+  line-height: 14px;
+  font-family: 'roboto';
+  font-weight: 500;
+}
+
+.insurance.pension .slide-pagination .swiper-pagination-current {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.insurance.pension .slide-pagination .swiper-pagination-total {
+  font-size: 18px;
+  font-weight: 350;
+}
+
+.insurance.pension .card-area {
+  margin-top: 30px;
+  padding-bottom: 12px;
+}
+
+.insurance.pension .card-area .main-card {
+  margin-bottom: 25px;
+}
+
+.insurance.pension .card-area .main-card ion-card-header .title {
+  line-height: 18px;
+  font-size: 18px;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+}
+
+.insurance.pension .card-area .main-card ion-card-header .age-area {
+  margin: 25px -25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.insurance.pension .card-area .main-card ion-card-header .age-area.type2 dl {
+  padding: 0 55px;
+}
+
+.insurance.pension .card-area .main-card ion-card-header .age-area dl {
+  padding: 0 28px;
+  border-left: 1px solid rgba(var(--key-c-fff-rgb), 0.3);
+  text-align: center;
+}
+
+.insurance.pension .card-area .main-card ion-card-header .age-area dl:nth-child(1) {
+  border-left: 0;
+}
+
+.insurance.pension .card-area .main-card ion-card-header .age-area dl dt {
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: 350;
+  opacity: 0.6;
+}
+
+.insurance.pension .card-area .main-card ion-card-header .age-area dl dd {
+  margin-top: 16px;
+  font-size: 50px;
+  line-height: 37px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.insurance.pension .card-area .main-card ion-card-header .text {
+  margin-top: 17px;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 350;
+  text-align: center;
+}
+
+.insurance.pension .card-area .main-card .card-footer ion-button {
+  border-top: 0;
+}
+
+.insurance.pension .card-area .main-card .card-footer ion-button .text {
+  margin-left: 28px;
+  font-weight: 500;
+}
+
+.insurance.pension .card-area .main-card .card-footer ion-button .arrow {
+  display: block;
+  margin-left: 5px;
+}
+
+.insurance.pension .card-area .main-card .card-footer ion-button .arrow.white span {
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+
+.insurance.pension .card-area .main-card .card-footer ion-button .arrow span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid #05a2be;
+  border-left: 1px solid #05a2be;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: -4px;
+  border-radius: 1px;
+  -webkit-animation: arrow-animate 1.4s infinite;
+          animation: arrow-animate 1.4s infinite;
+}
+
+.insurance.pension .card-area .main-card .card-footer ion-button .arrow span:nth-child(2) {
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+}
+
+.insurance.pension .card-area .main-card .card-footer ion-button .arrow span:nth-child(3) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+.insurance.pension .card-area .sub-card {
+  margin-bottom: 25px;
+}
+
+.insurance.pension .card-area .sub-card ion-card-header ion-card-title {
+  --color: var(--ft-c-222);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.insurance.pension .card-area .sub-card ion-card-header ion-card-title .unit-text {
+  font-size: 14px;
+  color: #999;
+  font-weight: 350;
+}
+
+.insurance.pension .card-area .sub-card .card-st3 {
+  margin: 0;
+  border-radius: 0;
+}
+
+.insurance.pension .card-area .sub-card .card-st3 ion-card-content {
+  padding: 0px 0px 23px 0px;
+}
+
+.insurance.pension .card-area .sub-card .card-st3 .btn-question {
+  --padding-start: 0;
+  --padding-end: 0;
+  --background: url('/static/images/is/ico_question_gray.png') no-repeat 0 0 / 100% auto;
+  --background-activated: url('/static/images/is/ico_question_gray.png') no-repeat 0 0 / 100% auto;
+  width: 17px;
+  height: 19px;
+  vertical-align: middle;
+}
+
+.insurance.pension .card-area .sub-card .card-st3 .card-footer {
+  padding-top: 22px;
+}
+
+.insurance.pension .card-area .sub-card .card-st3 .card-footer ul li {
+  margin-left: 16px;
+  margin-top: 7px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 350;
+  color: #888;
+}
+
+.insurance.pension .card-area .sub-card .card-st3 .card-footer ul li:before {
+  display: inline-block;
+  width: 16px;
+  margin-left: -16px;
+  content: "※";
+  color: #888;
+}
+
+.insurance.pension .card-area .sub-card .card-st3 .card-footer ul li:nth-child(1) {
+  margin-top: 0px;
+}
+
+.insurance.pension .card-area .sub-card ion-card-content .title {
+  line-height: 16px;
+  font-size: 16px;
+  color: fc222;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+}
+
+.insurance.pension .card-area .sub-card ion-card-content .text {
+  margin-top: 12px;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 350;
+  color: #666;
+}
+
+.insurance.pension .card-area .sub-card ion-card-content .img-area {
+  margin-top: 17px;
+}
+
+.insurance.pension .card-area .sub-card ion-card-content .refer-text {
+  margin-top: 7px;
+  line-height: 22px;
+  font-size: 14px;
+  text-align: right;
+  font-weight: 350;
+  color: #888;
+}
+
+.insurance.pension .is-list ion-item {
+  --padding-start: 0;
+  --padding-end: 0;
+  --inner-padding-start: 0;
+  --inner-padding-end: 0;
+  --inner-border-width: 0;
+  --background: #fff;
+  --border-radius: 20px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 10px 10px #000;
+          box-shadow: 0 10px 10px #000;
+}
+
+.insurance.pension .is-list ion-item .is-list-cont {
+  width: 100%;
+  background-color: #fff;
+}
+
+.insurance.pension .is-info {
+  position: relative;
+  clear: both;
+  margin-top: 12px;
+}
+
+.insurance.pension .is-info .is-category {
+  line-height: 22px;
+  font-weight: 350;
+  font-size: 16px;
+  color: #666;
+}
+
+.insurance.pension .is-info .is-name {
+  margin-top: 4px;
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+}
+
+.insurance.pension .is-info .is-price {
+  position: static;
+  margin-top: 8px;
+  line-height: 20px;
+  text-align: right;
+  font-size: 14px;
+  color: #000;
+}
+
+.insurance.pension .is-info .is-price .price {
+  font: 700 16px "Roboto", "NotoSansKR";
+}
+
+.insurance.pension .is-list .is-list-header {
+  margin-bottom: 10px;
+}
+
+.insurance.pension .is-list .is-list-header::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.insurance.pension .is-list .is-list-body:empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 340px;
+}
+
+.insurance.pension .is-list .is-list-body:empty::before {
+  content: '';
+  width: 120px;
+  height: 120px;
+  background: url(/static/images/is/ico_is_list_none.png) no-repeat 0 0/100% auto;
+}
+
+.insurance.pension .is-list .is-list-body:empty::after {
+  content: '가입한 연금이 없습니다.';
+  margin-top: 45px;
+}
+
+.insurance.pension .bot-btn-area {
+  padding-bottom: 40px;
+}
+
+.insurance.pension .pension-text-area .pop-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 25px;
+}
+
+.insurance.pension .pension-text-area .pop-area .pop-text {
+  margin-right: 7px;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+}
+
+.insurance.pension .pension-text-area .pop-area .btn-info {
+  --padding-start: 0;
+  --padding-end: 0;
+  --background: url('/static/images/is/btn_info.png') no-repeat 0 0 / 100% auto;
+  --background-activated: url('/static/images/is/btn_info.png') no-repeat 0 0 / 100% auto;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.insurance.pension .pension-text-area .title {
+  margin-top: 10px;
+  line-height: 27px;
+  font-size: 21px;
+  color: #222;
+  font-weight: 500;
+}
+
+.insurance.pension .pension-text-area .text {
+  margin-top: 8px;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 350;
+  color: #222;
+}
+
+.insurance.pension .pension-text-area .text span {
+  font-weight: 500;
+}
+
+.insurance.pension .pension-text-area .date {
+  margin-top: 14px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 350;
+  color: #222;
+}
+
+.insurance.pension .detail-card {
+  margin-top: -15px;
+}
+
+.insurance.pension .detail-card .sup-text {
+  font-size: 14px;
+  vertical-align: top;
+  font-weight: 700;
+}
+
+.insurance.pension .detail-refer {
+  padding-top: 27px;
+  padding-bottom: 43px;
+}
+
+.insurance.pension .detail-refer ul li {
+  margin-left: 19px;
+  margin-bottom: 13px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 350;
+}
+
+.insurance.pension .detail-refer ul li .bullet {
+  display: inline-block;
+  width: 19px;
+  margin-left: -19px;
+  vertical-align: bottom;
+  font-weight: 700;
+}
+
+.insurance.inquiry .is-inquiry {
+  position: relative;
+}
+
+.insurance.inquiry .is-inquiry p {
+  line-height: 1.4;
+}
+
+.insurance.inquiry .is-inquiry .btn-info {
+  --padding-start: 0;
+  --padding-end: 0;
+  --background: url('/static/images/is/btn_info.png') no-repeat 0 0 / 100% auto;
+  --background-activated: url('/static/images/is/btn_info.png') no-repeat 0 0 / 100% auto;
+  position: absolute;
+  right: 1px;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.insurance.inquiry .is-inquiry .button-clear {
+  margin-top: -10px;
+  height: 20px;
+}
+
+.insurance.inquiry .is-my {
+  margin-top: 30px;
+}
+
+.insurance.inquiry .is-my .title {
+  font-size: 18px;
+}
+
+.insurance.inquiry .is-my .monthly-premium {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 70px;
+}
+
+.insurance.inquiry .is-my .monthly-premium dt {
+  padding-bottom: 4px;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: 'Roboto';
+}
+
+.insurance.inquiry .is-my .monthly-premium dd {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+  font-size: 14px;
+}
+
+.insurance.inquiry .is-my .monthly-premium dd .price {
+  font: 500 50px "Roboto", "NotoSansKR";
+  letter-spacing: -0.03rem;
+}
+
+.insurance.inquiry .card-footer ion-button .text {
+  margin-left: 28px;
+}
+
+.insurance.inquiry .arrow {
+  margin-left: 5px;
+}
+
+.insurance.inquiry .arrow span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid #05a2be;
+  border-left: 1px solid #05a2be;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: -4px;
+  -webkit-animation: arrow-animate 1.5s infinite;
+          animation: arrow-animate 1.5s infinite;
+}
+
+.insurance.inquiry .arrow span:nth-child(2) {
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+}
+
+.insurance.inquiry .arrow span:nth-child(3) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+@keyframes arrow-animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(135deg) translate(5px, 5px);
+            transform: rotate(135deg) translate(5px, 5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(135deg) translate(-5px, -5px);
+            transform: rotate(135deg) translate(-5px, -5px);
+  }
+}
+
+.insurance.inquiry .is-list ion-item {
+  --padding-start: 0;
+  --padding-end: 0;
+  --inner-padding-start: 0;
+  --inner-padding-end: 0;
+  --inner-border-width: 0;
+  --background: #fff;
+  --border-radius: 20px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 10px 10px #000;
+          box-shadow: 0 10px 10px #000;
+}
+
+.insurance.inquiry .is-list ion-item .is-list-cont {
+  width: 100%;
+  background-color: #fff;
+}
+
+.insurance.inquiry .is-info {
+  position: relative;
+  clear: both;
+  margin-top: 15px;
+}
+
+.insurance.inquiry .is-info .is-co-logo > *, .insurance.inquiry .is-info .is-co-logo img {
+  display: block;
+  width: auto;
+  height: 15px;
+}
+
+.insurance.inquiry .is-info .is-co {
+  font-size: 18px;
+  color: #000;
+}
+
+.insurance.inquiry .is-info .is-name {
+  font-weight: 350;
+  font-size: 16px;
+  color: #000;
+}
+
+.insurance.inquiry .is-info .is-price {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  font-size: 14px;
+}
+
+.insurance.inquiry .is-info .is-price .price {
+  font: 700 16px "Roboto", "NotoSansKR";
+}
+
+.insurance.inquiry .is-info .is-period {
+  margin-top: 16px;
+  font-weight: 350;
+  font-size: 14px;
+  font-family: "Roboto", "NotoSansKR";
+  color: #666;
+}
+
+.insurance.inquiry .is-info .is-insured {
+  font-weight: 350;
+  font-size: 14px;
+  color: #666;
+}
+
+.insurance.inquiry .is-detail {
+  padding-bottom: 40px !important;
+}
+
+.insurance.inquiry .is-detail .is-co {
+  font-size: 21px;
+}
+
+.insurance.inquiry .is-detail .is-kinds {
+  font-size: 21px;
+  color: #999;
+}
+
+.insurance.inquiry .is-detail .is-kinds:after {
+  content: "";
+  display: inline-block;
+  margin: 0px 10px;
+  width: 1px;
+  height: 21px;
+  background-color: #e0e0e0;
+  vertical-align: -2px;
+}
+
+.insurance.inquiry .is-detail .is-name {
+  font-size: 14px;
+}
+
+.insurance.inquiry .is-detail .is-price {
+  position: static;
+  font-weight: 350;
+}
+
+.insurance.inquiry .is-detail .is-price .price {
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.insurance.inquiry .is-detail .is-info-detail {
+  margin-top: 25px;
+}
+
+.insurance.inquiry .is-detail .is-info-detail dt {
+  float: left;
+  width: 75px;
+  font-weight: 350;
+  color: #666;
+}
+
+.insurance.inquiry .is-list .is-list-header {
+  margin-bottom: 10px;
+}
+
+.insurance.inquiry .is-list .is-list-header::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.insurance.inquiry .is-list .btn-filter {
+  --color-activated: #222;
+  --padding-start: 0;
+  --padding-end: 25px;
+  --background: url(/static/images/ico_sort.png) no-repeat 100% 50% / 15px auto;
+  --background-activated: url(/static/images/ico_sort.png) no-repeat 100% 50% / 15px auto;
+  float: right;
+  height: 20px;
+  font-size: 14px;
+  color: #222;
+  text-decoration: underline;
+}
+
+.insurance.inquiry .is-list .is-list-body:empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 340px;
+}
+
+.insurance.inquiry .is-list .is-list-body:empty::before {
+  content: '';
+  width: 120px;
+  height: 120px;
+  background: url(/static/images/is/ico_is_list_none.png) no-repeat 0 0/100% auto;
+}
+
+.insurance.inquiry .is-list .is-list-body:empty::after {
+  content: '가입한 보험이 없습니다.';
+  margin-top: 45px;
+}
+
+.insurance.inquiry ion-tab {
+  padding-bottom: 50px;
+}
+
+.insurance.inquiry .tabs-st3 ion-tab-bar {
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+}
+
+.insurance.inquiry .tabs-st3 ion-tab-bar ion-tab-button {
+  -webkit-box-flex: inherit;
+      -ms-flex: inherit;
+          flex: inherit;
+  padding-left: 20px;
+  border-bottom: 0;
+}
+
+.insurance.consult .is-consult .card-header-area .name {
+  margin-bottom: 12px;
+  line-height: 18px;
+  font-size: 18px;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+}
+
+.insurance.consult .is-consult .card-header-area .text {
+  line-height: 22px;
+  font-size: 16px;
+  letter-spacing: -0.015em;
+  font-weight: 350;
+}
+
+.insurance.consult .is-consult .card-footer ion-button {
+  border-top: 0;
+}
+
+.insurance.consult .is-consult .card-footer .text {
+  margin-left: 28px;
+}
+
+.insurance.consult .arrow {
+  margin-left: 5px;
+}
+
+.insurance.consult .arrow span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid #05a2be;
+  border-left: 1px solid #05a2be;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: -4px;
+  -webkit-animation: arrow-animate 1.5s infinite;
+          animation: arrow-animate 1.5s infinite;
+}
+
+.insurance.consult .arrow span:nth-child(2) {
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+}
+
+.insurance.consult .arrow span:nth-child(3) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+@keyframes arrow-animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(135deg) translate(5px, 5px);
+            transform: rotate(135deg) translate(5px, 5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(135deg) translate(-5px, -5px);
+            transform: rotate(135deg) translate(-5px, -5px);
+  }
+}
+
+.insurance.consult .is-list .is-list-header {
+  margin-bottom: 10px;
+}
+
+.insurance.consult .is-list .is-list-header::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.insurance.consult .is-list .is-card.disabled .text-area .text {
+  color: #999;
+}
+
+.insurance.consult .is-list .is-card.disabled .text-area .date {
+  color: #999;
+}
+
+.insurance.consult .is-list .is-card.disabled .card-footer .consultant {
+  color: #999;
+}
+
+.insurance.consult .is-list .is-card .text-area {
+  margin-top: 7px;
+  margin-bottom: -5px;
+}
+
+.insurance.consult .is-list .is-card .text-area .text {
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+}
+
+.insurance.consult .is-list .is-card .text-area .date {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 350;
+  color: #666;
+}
+
+.insurance.consult .is-list .is-card .card-footer {
+  padding: 17px 25px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.insurance.consult .is-list .is-card .card-footer .consultant {
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+}
+
+.insurance.consult .is-list .btn-filter {
+  --color-activated: #222;
+  --padding-start: 0;
+  --padding-end: 25px;
+  --background: url(/static/images/ico_sort.png) no-repeat 100% 50% / 15px auto;
+  --background-activated: url(/static/images/ico_sort.png) no-repeat 100% 50% / 15px auto;
+  float: right;
+  height: 20px;
+  font-size: 14px;
+  color: #222;
+  text-decoration: underline;
+}
+
+.insurance.consult .is-list .is-list-body:empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 340px;
+}
+
+.insurance.consult .is-list .is-list-body:empty::before {
+  content: '';
+  width: 120px;
+  height: 120px;
+  background: url(/static/images/is/ico_is_list_none.png) no-repeat 0 0/100% auto;
+}
+
+.insurance.consult .is-list .is-list-body:empty::after {
+  content: '요청한 상담이 없습니다. \A 보험상담을 요청해보세요.';
+  white-space: pre;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.insurance.consult .consultant-info-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.insurance.consult .consultant-info-area .info .grade {
+  height: 14px;
+}
+
+.insurance.consult .consultant-info-area .info .grade span {
+  vertical-align: top;
+}
+
+.insurance.consult .consultant-info-area .info .company {
+  margin-top: 15px;
+  line-height: 16px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+}
+
+.insurance.consult .consultant-info-area .info .name {
+  margin-top: 7px;
+  line-height: 16px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+}
+
+.insurance.consult .consultant-info-area .info .nickname {
+  margin-top: 10px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 350;
+}
+
+.insurance.consult .consultant-info-area .mark {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 55px;
+  height: 55px;
+}
+
+.insurance.consult .consultant-info-area .mark.icon1 {
+  background: url("/static/images/is/ico_consultant_mark1.png") no-repeat 0 0/100% auto;
+}
+
+.insurance.consult .consultant-info-area .mark.icon2 {
+  background: url("/static/images/is/ico_consultant_mark2.png") no-repeat 0 0/100% auto;
+}
+
+.insurance.consult .cont-header.detail .title {
+  line-height: 24px;
+  font-size: 18px;
+  color: #222;
+  font-weight: 500;
+}
+
+.insurance.consult .cont-header.detail .date {
+  margin-top: 7px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 350;
+}
+
+.insurance.consult .cont-header.detail .date span:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  height: 14px;
+  margin: -2px 10px 0;
+  background-color: #e0e0e0;
+}
+
+.insurance.consult .cont-header.detail .date span:first-child:before {
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.insurance.consult .cont-body.detail {
+  padding-top: 0px !important;
+  padding-bottom: 74px !important;
+}
+
+.insurance.consult .cont-body.detail .report-card ion-card-content ul li {
+  margin-top: 20px;
+}
+
+.insurance.consult .cont-body.detail .report-card ion-card-content ul li:first-child {
+  margin-top: 0;
+}
+
+.insurance.consult .cont-body.detail .report-card ion-card-content ul li .report-name {
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+}
+
+.insurance.consult .cont-body.detail .report-card ion-card-content ul li .report-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: 350;
+  color: #666;
+}
+
+.insurance.consult .cont-body.detail .report-card ion-card-content ul li .report-info .info span:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  height: 14px;
+  margin: -2px 10px 0;
+  background-color: #e0e0e0;
+}
+
+.insurance.consult .cont-body.detail .report-card ion-card-content ul li .report-info .info span:first-child:before {
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.insurance.analysis .question-list {
+  margin-top: 26px;
+}
+
+.insurance.analysis .question-list li {
+  margin-bottom: 41px;
+}
+
+.insurance.analysis .question-list li .num {
+  font-size: 30px;
+  line-height: 36px;
+  color: #05a2be;
+  font-weight: 700;
+}
+
+.insurance.analysis .question-list li .question {
+  margin-top: 4px;
+  margin-bottom: 28px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #222;
+  font-weight: 500;
+}
+
+.insurance.analysis .question-list li .question .sub-text {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 350;
+  color: #666;
+}
+
+.insurance.analysis .question-list li .question-radio .radio-item {
+  margin-top: 15px;
+  --border-color: var(--bg-c-line);
+  --border-width: 1px;
+  --border-radius: 14px;
+  --transition: none;
+  --padding-start: 24px;
+  --inner-padding-bottom: 22px;
+  --inner-padding-top: 22px;
+}
+
+.insurance.analysis .question-list li .question-radio .radio-item .radio-btn {
+  width: 20px;
+  height: 20px;
+  margin: 0 11px auto 0;
+  --color-checked: transparent;
+  background: var(--bg-c-line) url("/static/images/ht/ico_radio_gray.png") no-repeat 0 0/100% auto;
+  border-radius: 20px;
+}
+
+.insurance.analysis .question-list li .question-radio .radio-item .radio-btn.radio-checked {
+  background: #05a2be url("/static/images/ht/ico_radio_white.png") no-repeat 0 0/100% auto;
+}
+
+.insurance.analysis .question-list li .question-radio .radio-item .radio-label {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 350;
+  color: #222;
+}
+
+.insurance.analysis .question-list li .question-radio .radio-item.item-radio-checked {
+  --background: #fff;
+  --border-color: #fff;
+  --box-shadow: 0 8px 19px rgba(0, 0, 0, 0.15);
+}
+
+.insurance.analysis .question-list li .question-radio .radio-item.item-radio-checked .radio-label {
+  color: #05a2be;
+  font-weight: 500;
+}
+
+.insurance.analysis .question-list li .question-card ion-card-content ion-grid {
+  padding: 12px 0 10px;
+}
+
+.insurance.analysis .question-list .input-after {
+  position: absolute;
+  bottom: 7px;
+  right: 0;
+  font-size: 16px;
+  font-weight: 350;
+  color: #999;
+}
+
+.life .weather-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+}
+
+.life .weather-icon.sun {
+  background: url("/static/images/li/ico_sun.png") no-repeat left 0 top 50%/65px auto;
+}
+
+.life .weather-icon.cloud {
+  background: url("/static/images/li/ico_cloud.png") no-repeat left 0 top 50%/65px auto;
+}
+
+.life .temper-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.life .temper-area .day {
+  margin-right: 15px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 350;
+}
+
+.life .temper-area .temperature {
+  font-family: roboto;
+  font-size: 15px;
+  color: #222;
+  font-weight: 500;
+}
+
+.life .temper-area .temperature .num {
+  font-size: 40px;
+}
+
+.life .temper-area .slash {
+  margin: 0 8px;
+  font-family: roboto;
+  font-size: 17px;
+  color: #222;
+  font-weight: 350;
+}
+
+.life .weather-info dl dt {
+  line-height: 14px;
+  font-size: 14px;
+  color: #888;
+  font-weight: 350;
+}
+
+.life .weather-info dl dd .percent {
+  line-height: 15px;
+  font-size: 10px;
+  color: #222;
+  font-weight: 500;
+}
+
+.life .weather-info dl dd .percent .num {
+  font-size: 15px;
+}
+
+.life .weather-info dl dd .status {
+  padding-left: 17px;
+  line-height: 15px;
+  font-size: 14px;
+  font-weight: 350;
+  white-space: nowrap;
+}
+
+.life .weather-info dl dd .status.icon1 {
+  color: #05a2be;
+  background: url("/static/images/li/ico_face_s_01.png") no-repeat left 0 top 50%/15px auto;
+}
+
+.life .weather-info dl dd .status.icon2 {
+  color: #92cc41;
+  background: url("/static/images/li/ico_face_s_02.png") no-repeat left 0 top 50%/15px auto;
+}
+
+.life .weather-info dl dd .status.icon3 {
+  color: #d8bb00;
+  background: url("/static/images/li/ico_face_s_03.png") no-repeat left 0 top 50%/15px auto;
+}
+
+.life .weather-info dl dd .status.icon4 {
+  color: #ff9019;
+  background: url("/static/images/li/ico_face_s_04.png") no-repeat left 0 top 50%/15px auto;
+}
+
+.life .indices-icon {
+  padding-top: 26px;
+  text-align: center;
+  font-size: 0;
+}
+
+.life .indices-icon ion-badge {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  height: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.life .indices-icon.icon1 {
+  background: url("/static/images/li/ico_face_01.png") no-repeat left 50% top 0%/21px auto;
+}
+
+.life .indices-icon.icon1 ion-badge {
+  --background: #05a2be;
+}
+
+.life .indices-icon.icon2 {
+  background: url("/static/images/li/ico_face_02.png") no-repeat left 50% top 0%/21px auto;
+}
+
+.life .indices-icon.icon2 ion-badge {
+  --background: #92cc41;
+}
+
+.life .indices-icon.icon3 {
+  background: url("/static/images/li/ico_face_03.png") no-repeat left 50% top 0%/21px auto;
+}
+
+.life .indices-icon.icon3 ion-badge {
+  --background: #d8bb00;
+}
+
+.life .indices-icon.icon4 {
+  background: url("/static/images/li/ico_face_04.png") no-repeat left 50% top 0%/21px auto;
+}
+
+.life .indices-icon.icon4 ion-badge {
+  --background: #ff9019;
+}
+
+.life .indices-icon.icon5 {
+  background: url("/static/images/li/ico_face_05.png") no-repeat left 50% top 0%/21px auto;
+}
+
+.life .indices-icon.icon5 ion-badge {
+  --background: #ff333a;
+}
+
+.life[class*='magazine'] .list-cont {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.life[class*='magazine'] .list-cont .cate {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.life[class*='magazine'] .list-cont .cate ion-badge {
+  padding: 8px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 15px;
+  background-color: #05a2be;
+}
+
+.life[class*='magazine'] .list-cont .title {
+  margin: 3px 0 10px;
+  font-weight: 350;
+  font-size: 21px;
+  line-height: 1.3;
+  letter-spacing: -0.0125rem;
+  color: #fff;
+}
+
+.life[class*='magazine'] .list-cont .tag ion-badge {
+  padding: 3px 10px 4px;
+  font-weight: 350;
+  font-size: 13px;
+  color: #fff;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.life[class*='magazine'] .list-cont .tag ion-badge + ion-badge {
+  margin-left: 2px;
+}
+
+.life[class*='magazine'] .visual {
+  position: relative;
+  z-index: -1;
+}
+
+.life[class*='magazine'] .visual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(255, 255, 255, 0)), to(black));
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 70%, black);
+}
+
+.life.magazine-detail .cont-header {
+  position: relative;
+  height: 280px;
+  padding: 0 !important;
+}
+
+.life.magazine-detail .cont-body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #fff;
+}
+
+.life.magazine-detail .list-cont {
+  z-index: 10;
+}
+
+.life.magazine-detail .visual {
+  overflow: hidden;
+  height: 100%;
+  z-index: 1;
+}
+
+.life.magazine-detail .visual::before {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(255, 255, 255, 0)), to(black));
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 30%, black);
+}
+
+.life.magazine-detail .mag-list strong {
+  font-weight: 500;
+}
+
+.life.magazine-detail .mag-list > li + li {
+  margin-top: 50px;
+}
+
+.life.magazine-detail .mag-list > li .no {
+  display: inline-block;
+  font-size: 18px;
+  font-family: "Roboto";
+  border-bottom: 3px solid #222;
+}
+
+.life.magazine-detail .mag-list .title {
+  display: block;
+  margin: 9px 0 15px;
+  font-size: 18px;
+}
+
+.life.magazine-detail .mag-list p {
+  font-weight: 350;
+  font-size: 16px;
+}
+
+.life.magazine-detail .mag-list ul li strong {
+  position: relative;
+  display: block;
+  padding-left: 25px;
+  color: #0ecea7;
+}
+
+.life.magazine-detail .mag-list ul li strong .no {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  font-size: 10px;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  background-color: #0ecea7;
+}
+
+.life.magazine-detail .mag-list ul li strong em {
+  font-style: normal;
+  font-weight: 350;
+}
+
+.life.magazine-detail .mag-list ul li + li {
+  margin-top: 10px;
+}
+
+.life.magazine-detail .mag-list ul li p + p {
+  margin: 10px 0;
+}
+
+.life.magazine-detail .source {
+  margin-top: 60px;
+  font-weight: 350;
+  font-size: 14px;
+  color: #888;
+}
+
+.life.magazine-detail .hashtag {
+  margin-top: 20px;
+  font-weight: 350;
+  font-size: 16px;
+}
+
+.cs .title {
+  font-size: 16px;
+}
+
+.cs .date, .cs .status, .cs .reply-date {
+  font-size: 14px;
+}
+
+.cs .date {
+  color: #666;
+}
+
+.cs .status {
+  color: #666;
+}
+
+.cs .text {
+  font-weight: 350;
+  line-height: 1.4;
+}
+
+.cs .board-header {
+  padding-bottom: 20px;
+}
+
+.cs .board-header .cate {
+  display: block;
+}
+
+.cs .board-body {
+  padding-top: 15px;
+}
+
+.cs .board-ask-tl {
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+.cs .board-ask-tl .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cs .board-ask-tl .date dt, .cs .board-ask-tl .date dd {
+  font: 500 14px "Roboto", "NotoSansKR";
+  color: #222;
+}
+
+.cs .board-ask-tl .date dt {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.cs .board-ask-tl .date dd {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 2px;
+  padding-left: 3px;
+  font-weight: 500;
+}
+
+.cs .reply-date {
+  padding-bottom: 20px;
+  color: #222;
+}
+
+.cs .reply-date .date {
+  color: #222;
+}
+
+.cs .cont-count {
+  position: relative;
+  float: right;
+  top: 7px;
+  font-size: 14px;
+  color: #888;
+}
+
+.cs .cont-count .write {
+  color: #222;
+}
+
+.cs .board-reask .board-body {
+  margin-bottom: 20px;
+  padding: 25px 25px;
+  border-radius: 2.5px;
+  background: #f0f2f2;
+}
+
+.cs .board-reask.old {
+  display: none;
+}
+
+.cs .cont-header {
+  padding-bottom: 25px !important;
+}
+
+.cs .cont-body .board-reask.old {
+  display: block;
+}
+
+.cs .cont-body .board-reask.old .board-body {
+  background: #fff;
+}
+
+.cs .cont-body .board-reask.old:first-of-type .board-ask-tl {
+  border-top: 0;
+}
+
+/* 회원가입 */
+.limit-time {
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+  font-size: 16px;
+  color: #ff583e;
+}
+
+.dash {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 100%;
+  text-indent: -9999px;
+}
+
+.dash::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 1px;
+  margin-left: -4.5px;
+  background-color: #222;
+}
+
+.divider {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 1px;
+  height: 12.5px;
+  margin: 0 10px;
+  background-color: #e0e0e0;
+}
+
+.mm #header.header-st2 ion-buttons ion-back-button {
+  display: block;
+}
+
+.card-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 538px;
+  text-align: center;
+}
+
+.card-align h2 {
+  font-size: 21px;
+}
+
+.card-align p, .card-align ul, .card-align li {
+  font-weight: 350;
+  font-size: 16px;
+}
+
+.card-align .ico {
+  width: 160px;
+  height: 160px;
+  margin: 40px 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 160px auto;
+}
+
+.login-password h2 {
+  font-weight: 350;
+  font-size: 18px;
+}
+
+.login-password .form-password {
+  margin-top: 24px;
+}
+
+.login-password .form-password ion-item {
+  position: relative;
+  --inner-border-width: 0;
+}
+
+.login-password .form-password ion-item ion-label.pass-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: inherit;
+  font-family: "NotoSansKR" !important;
+  font-size: 78px;
+  letter-spacing: 12px;
+  color: #999;
+}
+
+.login-password .form-password ion-input {
+  font-family: "NotoSansKR" !important;
+  font-size: 78px;
+  letter-spacing: 12px;
+  caret-color: transparent !important;
+}
+
+.modal .find-addr ion-list, .modal .health-info ion-list {
+  overflow-y: scroll;
+  height: 195px;
+  margin: 34px 0 0 0;
+}
+
+.modal .find-addr ion-list ion-item, .modal .health-info ion-list ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --min-height: inherit;
+  font-weight: 350;
+  font-size: 18px;
+}
+
+.modal .find-addr ion-list ion-item + ion-item, .modal .health-info ion-list ion-item + ion-item {
+  margin-top: 10px;
+}
+
+.modal .find-addr ion-list:empty, .modal .health-info ion-list:empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .find-addr ion-list:empty::before, .modal .health-info ion-list:empty::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 13px;
+  background: url("/static/images/ico_empty.png") no-repeat 0 0/100% auto;
+}
+
+.modal .find-addr ion-list:empty::after, .modal .health-info ion-list:empty::after {
+  content: '검색 결과가 없습니다.';
+  font-weight: 350;
+  font-size: 18px;
+  color: #999;
+}
+
+.modal .find-addr ion-list:empty::after {
+  content: '검색 결과가 없습니다.';
+}
+
+.modal .health-info ion-list:empty::after {
+  content: '건강검진정보가 없습니다.';
+}
+
+.modal .modal-filter ion-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.modal .modal-filter ion-card-header .sub-text {
+  margin-left: auto;
+  font-weight: 350;
+  font-size: 14px;
+  color: #888;
+}
+
+.modal .modal-filter .checkbox-area {
+  display: block;
+  width: 100%;
+}
+
+.modal .modal-filter .checkbox-area ion-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.modal .modal-filter .checkbox-area ion-list ion-item {
+  --padding-start: 0px;
+  --inner-padding-end: 0;
+  width: 25%;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: -1px;
+}
+
+.modal .modal-filter .checkbox-area ion-list ion-item:nth-child(1) {
+  margin-left: 0;
+}
+
+.modal .modal-filter .checkbox-area ion-list ion-item.item-checkbox-checked {
+  border-color: #05a2be;
+}
+
+.modal .modal-filter .checkbox-area ion-list ion-item.item-checkbox-checked ion-label {
+  color: #05a2be;
+  font-weight: 500;
+}
+
+.modal .modal-filter .checkbox-area ion-list ion-item.item-checkbox-checked + ion-item {
+  border-left-color: #05a2be;
+}
+
+.modal .modal-filter .checkbox-area ion-list ion-item ion-checkbox {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.modal .modal-filter .checkbox-area ion-list ion-item ion-label {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 350;
+  color: #999;
+}
+
+.modal .modal-filter .radio-area {
+  display: block;
+  width: 100%;
+}
+
+.modal .modal-filter .radio-area ion-list .item-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-filter .radio-area ion-list ion-item {
+  --min-height: auto;
+  --padding-start: 0px;
+  --padding-top: 11px;
+  --padding-bottom: 11px;
+  --inner-padding-end: 0;
+  width: 25%;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: -1px;
+}
+
+.modal .modal-filter .radio-area ion-list ion-item.item-text-center {
+  --min-height: 44px;
+}
+
+.modal .modal-filter .radio-area ion-list ion-item:nth-child(1) {
+  margin-left: 0;
+}
+
+.modal .modal-filter .radio-area ion-list ion-item.item-radio-checked {
+  border-color: #05a2be;
+}
+
+.modal .modal-filter .radio-area ion-list ion-item.item-radio-checked ion-label {
+  color: #05a2be;
+  font-weight: 500;
+}
+
+.modal .modal-filter .radio-area ion-list ion-item.item-radio-checked + ion-item {
+  border-left-color: #05a2be;
+}
+
+.modal .modal-filter .radio-area ion-list ion-item ion-radio {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.modal .modal-filter .radio-area ion-list ion-item ion-label {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 350;
+  color: #999;
+}
+
+.modal .modal-filter .reset-area {
+  text-align: center;
+}
+
+.modal .modal-filter .reset-area .btn-reset {
+  --padding-start: 19px;
+  --padding-end: 0;
+  height: 14px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #222;
+  vertical-align: top;
+  text-decoration: none;
+  background: url("/static/images/btn_reset.png") no-repeat left 0 top 50%/13px auto;
+}

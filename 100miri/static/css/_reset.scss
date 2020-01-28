@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+$noto: 'NotoSansKR';
+$roboto: 'Roboto';
+html {color: #222;font-family: $noto;letter-spacing: -0.0125em;line-height: 1.5;}
+html,body {font-weight: 500; font-family: $noto;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin: 0;padding: 0}
+dl,ul,ol,menu,li {list-style: none;}
+a {color: #222;text-decoration: underline;}
+h1,h2,h3,h4,h5,h6 {font-weight: 500;}
+
+/* ionic reset */
+html {
+    &.ios,&.md {
+        --ion-default-font: 'NotoSansKR';
+    }
+}
+.sc-ion-card-ios-h, .sc-ion-card-ios-s{
+    --color: inherit;
+}
+pre {overflow: inherit;font-weight: 350;font-family: $noto;white-space: pre-line}
+input,select,textarea,button,a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    &:focus {
+        outline: 0;
+        outline-color: transparent;
+        outline-style: none;
+    }
+}
+//font
+.noto {font-family: $noto}
+.roboto {font-family: $roboto;font-weight: 400;}
+//font-color
+$fc222 : #222;
+$fc666 : #666;
+$fc888 : #888;
+$fc999 : #999;
+.fc222 {color: $fc222 !important}
+.fc666 {color: $fc666 !important}
+.fc888 {color: $fc888 !important}
+.fc999 {color: $fc999 !important}
+
+//key-color
+$kc-blue : #05a2be;
+$kc-green : #0ecea7;
+.kc-b {color: $kc-blue !important}
+.kc-g {color: $kc-green !important}
+//point-color
+$pc-blue: #0096ff;
+$pc-red: #ee1c25;
+$pc-orange: #e47600;
+.pc-b {color: $pc-blue !important}
+.pc-r {color: $pc-red !important}
+.pc-o {color: $pc-orange !important}
+//color
+$bgc1 : #f0f2f2;
+$bgc2 : #ddd;
+
+//path
+$img-path: '/static/images';
+
+//test
+$color1 : #a8a9f6;
+$color2 : #f5a9a9;
+
+
+//ion
+ion-item {
+    --background: transparent;
+    --background-activated: transparent;
+}

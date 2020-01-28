@@ -1,0 +1,157 @@
+@import "_fonts";
+@import "_reset";
+
+$noto: 'NotoSansKR';
+$roboto: 'roboto';
+
+/* layout */
+/* header */
+.header {
+    ion-toolbar:last-child {
+        //--border-width: 0;
+        --min-height: 110px;
+        --padding-top: 0;
+        --padding-bottom: 0;
+        --padding-start: 20px;
+        --padding-end: 20px;
+    }
+
+    .header-tl {
+        position: static;
+        padding: 0 0 24px 0;
+        font-size: 25px;
+        font-family: $noto;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    .header-btn {
+        --min-height: 25px;
+        padding: 17.5px 0 6.5px;
+
+        button {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    ion-back-button {
+        display: block;
+        width: 25px;
+        height: 25px;
+        --background: url('/static/images/ico-back.png') no-repeat 0 0 / 100% auto;
+
+        * {
+            width: 100% !important;
+            height: 100% !important;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+/* footer */
+
+/* tabs */
+
+
+.nav-tl {
+    color: #53c8ee;
+}
+
+.footer {
+    position: relative;
+}
+
+.footer-toolbar {
+    padding: 0 20px;
+}
+
+.btn-home {
+    width: 20px;
+    height: 20px;
+    background: url('/static/images/ico-home.png') no-repeat 0 0 / 100% auto;
+}
+
+.btn-more {
+    width: 20px;
+    height: 20px;
+    background: url('/static/images/ico-more.png') no-repeat 0 0 / 100% auto;
+}
+
+.nav {
+    --background: transparent;
+    ion-item {
+        display: inline-block;
+        --min-height: inherit;
+        --padding-start: 0;
+        --inner-padding-end: 0;
+        --inner-border-width: 0;
+    }
+    .nav-sub2 {
+        position: absolute;
+        left: 0;
+        top: -50px;
+    }
+}
+
+.footer-nav {
+    height: 50px;
+    margin: 0 25px;
+    padding: 0 15px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, .05) 0 0 20px;
+
+    .nav-sub {
+        overflow-x: auto;
+        position: absolute;
+        left: -20px;
+        top: -15px;
+        padding: 0 10px;
+        white-space: nowrap;
+
+        li {
+            display: inline-block;
+            padding: 0 10px;
+            white-space: nowrap;
+        }
+    }
+
+    >li {
+        float: left;
+        padding: 0 15px;
+
+        &.active a {
+            top: -4px;
+            font-size: 20px;
+            color: #222;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 50%;
+                bottom: 4px;
+                width: 4px;
+                height: 4px;
+                margin: 0 0 0 -2px;
+                border-radius: 50%;
+                background-color: #222;
+            }
+        }
+
+        a {
+            display: inline-block;
+            position: relative;
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 50px;
+            letter-spacing: -2px;
+            color: #888;
+        }
+    }
+}
+
+.item-detail-icon {
+    border: 1px solid #ccc;
+}

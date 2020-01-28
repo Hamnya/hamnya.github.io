@@ -1,0 +1,45 @@
+/*
+.submenu li {
+    padding-left: 15px;
+}
+*/
+
+/* .submenu li::before {content: '';display: inline-block;width: 3px;height: 3px;margin: 0 5px 0 10px;border-radius: 100%;vertical-align: middle;background: #555;} */
+/*         .list-nav .submenu {display: none;} */
+/* .list-nav>li {border-bottom: 1px solid #ddd;} */
+
+/* .list-nav .subm {position: relative;}
+.list-nav>li .active {display: block}
+.list-nav>li .subm::after {content: '';position: absolute;right: 0;top: 50%;display: block;width: 6px;height: 6px;margin: -3px 0 0 -3px;border-left: 2px solid #555;border-bottom: 2px solid #555;transform: rotate(-45deg);transition: all .2s;}
+.list-nav>li .active .subm::after {transform: rotate(135deg)} */
+
+
+[class*='guide-badge-'] {display: inline-block;margin-left: 10px;padding: 2px 5px;font-size: 10px;font-family: 'Roboto';color: #fff;text-transform: uppercase;border-radius: 7px;vertical-align: middle;}
+.guide-badge-ing {background: #0ecea7;}
+.guide-badge-done {background: #ee1c25;}
+.guide-badge-fine {background: #05a2be;}
+.work-status {padding: 0 20px;}
+.work-status em{font-style: normal;}
+.work-status .guide-badge-ing{margin-left: 0;}
+
+.list-nav .date {float: right;font-weight: 350;font-size: 14px;color: #666;}
+
+h1 {padding: 0 20px;}
+h2 {font-size: 14px;color: #999;}
+h3 {font-size: 18px}
+
+.list-nav {padding: 10px 20px;}
+.list-nav>li {padding-top: 10px;}
+.dept4 {font-size: 15px; color: #999;}
+/* .dept3 {display: none;} */
+.dept3>li {padding: 10px 0;}
+.dept3 h4 {font-size: 12px;background: #eee;}
+.dept3.submenu > li {padding: 0;}
+.list-nav .subm {position: relative;}
+.list-nav .subm::after {content: '';position: absolute;right: 0;top: 50%;display: block;width: 6px;height: 6px;margin: -3px 0 0 -3px;border-left: 2px solid #bbb;border-bottom: 2px solid #bbb;transform: rotate(-45deg);transition: all .2s;}
+.list-nav .active .subm::after {transform: rotate(135deg)} 
+
+.btn-area {position: fixed;right: 40px;bottom: 20px;}
+.btn-area [class*='btn'] {width: 30px;height: 30px;color: #fff;border: 0;border-radius: 100%;background: red;}
+
+.memo {display: block; font-size:14px; color: #888;}

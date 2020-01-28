@@ -1,0 +1,1493 @@
+// clearfix
+@mixin clearfix {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+ 
+.insurance {
+    // font color css 변수
+    --ft-c-222: #222;
+    --ft-c-222-rgb: 34, 34, 34;
+    --ft-c-666: #666;
+    --ft-c-666-rgb: 102, 102, 102;
+    --ft-c-888: #888;
+    --ft-c-888-rgb: 136, 136, 136;
+    --ft-c-999: #999;
+    --ft-c-999-rgb: 153, 153, 153;
+ 
+    // bg color css 변수
+    --bg-c-bg: #f0f2f2;
+    --bg-c-bg-rgb: 240, 242, 242;
+    --bg-c-line: #ddd;
+    --bg-c-line-rgb: 221, 221, 221;
+    --bg-c-btn: #bbb;
+    --bg-c-btn-rgb: 187, 187, 187;
+ 
+    // key color css 변수
+    --key-c-222: #222;
+    --key-c-222-rgb: 34, 34, 34;
+    --key-c-b: #05a2be;
+    --key-c-b-rgb: 5, 162, 190;
+    --key-c-g: #0ecea7;
+    --key-c-g-rgb: 14, 206, 167;
+    --key-c-fff: #fff;
+    --key-c-fff-rgb: 255, 255, 255;
+ 
+    // 보험 color css 변수
+    --is-c-y: #fdcb32;
+    --is-c-y-rgb: 253, 203, 50;
+    --is-c-r: #ee5353;
+    --is-c-r-rgb: 238, 83, 83;
+    --is-c-g: #7fda5f;
+    --is-c-g-rgb: 127, 218, 95;
+    --is-c-b: #53c8ee;
+    --is-c-b-rgb: 83, 200, 238;
+    --is-c-p: #ee87d5;
+    --is-c-p-rgb: 238, 135, 213;
+    --is-c-gr: #ededed;
+    --is-c-gr-rgb: 237, 237, 237;
+    --is-c-null: transparent;
+ 
+    // 보험 badge style
+    @mixin badge {
+        min-width: 43px;
+        padding: 0 5px;
+        margin-left: 5px;
+        line-height: 20px;
+        border-radius: 2px;
+        font-size: 13px;
+        color: #fff;
+        font-weight: 500;
+ 
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+ 
+    // bullet style
+    @mixin bullet {
+        &::before {
+            position: relative;
+            top: -2px;
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--is-c-null);
+            content: "";
+        }
+    }
+
+    @mixin star-rating-s {
+        display: inline-block;
+        height: 14px;
+        overflow: hidden;
+        background: url('#{$img-path}/is/ico_rating.png') no-repeat;
+        background-size: 85px auto;
+    }
+ 
+    .badge-area {
+        @include clearfix;
+        font-size: 0;
+        display: block;
+        .badge-category {
+            float: left;
+        }
+        .badge-status {
+            float: right;
+        }
+    }
+    ion-badge {
+        @include badge;
+        &.badge-yellow {
+            background: #fc880a;
+        }
+        &.badge-red {
+            background: #f84646;
+        }
+        &.badge-green {
+            background: #0ece76;
+        }
+        &.badge-blue {
+            background: var(--is-c-b);
+        }
+        &.badge-pink {
+            background: var(--is-c-p);
+        }
+        // 사적연금
+        &.badge-purple {
+            background: #de78c5;
+        }
+        
+        &.badge-outline {
+            background: transparent;
+            border: 1px solid var(--ft-c-222);
+            min-width: 45px;
+            box-sizing: border-box;
+            height: 20px;
+            line-height: 18px;
+            color: var(--ft-c-222);
+        }
+ 
+        // 보험 상담 badge
+        // +공적연금
+        &.badge-consult-b {
+            background: #37b6df;
+            color: #fff;
+        }
+ 
+        &.badge-consult-g {
+            background: #0ece76;
+            color: #fff;
+        }
+        &.badge-consult-g2 {
+            background: var(--key-c-g);
+            color: #fff;
+        }
+ 
+        &.badge-consult-bl {
+            background: var(--key-c-222);
+            color: #fff;
+        }
+ 
+        &.badge-consult-r {
+            background: #f84646;
+            color: #fff;
+        }
+        &.badge-consult-r2 {
+            background: var(--is-c-r);
+            color: #fff;
+        }
+
+        &.badge-consult-gr {
+            background: #bbbbbb;
+            color: #fff;
+        }
+    }
+ 
+    // 보험료 style
+    .premium-category {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -7px;
+        dl {
+            flex: 1;
+            flex-basis: 50%;
+            font-size: 0;
+            margin-bottom: 7px;
+            @include bullet;
+            &.premium-yellow {
+                --is-c-null: var(--is-c-y);
+            }
+            &.premium-red {
+                --is-c-null: var(--is-c-r);
+            }
+            &.premium-green {
+                --is-c-null: var(--is-c-g);
+            }
+            &.premium-blue {
+                --is-c-null: var(--is-c-b);
+            }
+            &.premium-pink {
+                --is-c-null: var(--is-c-p);
+            }
+            dt {
+                display: inline-block;
+                margin-left: 4.5px;
+                font-weight: 350;
+                font-size: 16px;
+                color: var(--ft-c-666);
+            }
+            dd {
+                display: inline-block;
+                margin-left: 9px;
+                font-size: 16px;
+                color: var(--ft-c-666);
+                .price {
+                    font: 500 17px 'Roboto', $noto;
+                    color: var(--ft-c-222);
+                }
+            }
+        }
+    }
+ 
+    // card disabled
+    .disabled {
+        ion-badge {
+            background: var(--is-c-gr);
+            color: var(--ft-c-999);
+        }
+        .badge-outline {
+            border-color: var(--ft-c-999);
+            background: transparent;
+        }
+        .is-co-logo img {
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+        &.is-card {
+            .is-info {
+                .is-co {
+                    color: var(--ft-c-999);
+                }
+                .is-name {
+                    color: var(--ft-c-999);
+                }
+                .is-price {
+                    color: var(--ft-c-999);
+                }
+                .is-period {
+                    color: var(--ft-c-999);
+                }
+                .is-insured {
+                    color: var(--ft-c-999);
+                }
+            }
+        }
+    }
+
+    // 별점 small
+    .star-rating-s {
+        @include star-rating-s;
+        width: 85px;
+
+        span {
+            @include star-rating-s;
+            background-position: left bottom;
+            line-height: 0;
+            vertical-align: top;
+        }
+    }
+ 
+    .question {
+        &.q1 {
+            ion-item {
+                --inner-border-width: 0px;
+ 
+                ion-radio {
+                    margin: 0;
+                    background: var(--is-c-b);
+                    --color-checked: transparent;
+ 
+                }
+            }
+        }
+    }
+ 
+ 
+    /* 연금조회 */
+    &.pension {
+        /* 연금조회 메인 */
+        .top-area {
+            position: relative;
+            font-size: 0;
+ 
+            .text {
+                line-height: 22px;
+                font-size: 16px;
+                font-weight: 350;
+                color: $fc222;
+ 
+                .point {
+                    font-weight: 500;
+                    color: $kc-blue;
+                }
+            }
+ 
+            .text-s {
+                margin-top: 8px;
+                font-size: 14px;
+                line-height: 20px;
+                color: $fc666;
+                font-weight: 350;
+            }
+ 
+            .btn-clear {
+                --padding-start: 0px;
+                --padding-end: 0px;
+                height: 16px;
+                margin-top: 7px;
+                line-height: 20px;
+                font-size: 14px;
+            }
+
+            .btn-analysis-down {
+                --background: transparent;
+                --background-activated: transparent;
+                height: 20px;
+                padding-right: 25px;
+                font-size: 14px;
+                background: url(#{$img-path}/is/btn_analysis_down.png) no-repeat 100% 50% / 15px auto;
+            }
+ 
+            .btn-area {
+                margin-top: 13px;
+ 
+                .date {
+                    margin-bottom: 3px;
+                    line-height: 20px;
+                    font-size: 14px;
+                    font-weight: 350;
+                    color: $fc222;
+                }
+            }
+ 
+            .btn-info {
+                --padding-start: 0;
+                --padding-end: 0;
+                --background: url('#{$img-path}/is/btn_info.png') no-repeat 0 0 / 100% auto;
+                --background-activated: url('#{$img-path}/is/btn_info.png') no-repeat 0 0 / 100% auto;
+                position: absolute;
+                right: 1px;
+                top: 38px;
+                width: 25px;
+                height: 25px;
+            }
+ 
+        }
+ 
+        .slide-area {
+            margin-top: 30px;
+ 
+            #mainSlide {
+                overflow: visible;
+ 
+                .swiper-slide {
+                    justify-content: start;
+                    align-items: start;
+                    width: calc(100% - 30px);
+                    margin: 0 15px;
+ 
+                    &:nth-child(1) {
+                        margin-left: -15px;
+                    }
+ 
+                    &:nth-child(4) {
+                        margin-right: -15px;
+                    }
+                }
+ 
+                ion-card {
+                    width: 100%;
+                    text-align: left;
+                    overflow: initial;
+                    margin-bottom: 20px;
+ 
+                    ion-card-header {
+                        border-top-right-radius: 25px;
+                        height: 181px;
+ 
+                        .title {
+                            line-height: 37px;
+                            font-weight: 500;
+                            font-size: 20px;
+                            padding-left: 45px;
+                            white-space: nowrap;
+ 
+                            &.icon1 {
+                                background: url('#{$img-path}/IS/ico_pension1.png') no-repeat top 50% left 2px / 32px auto;
+                            }
+ 
+                            &.icon2 {
+                                background: url('#{$img-path}/IS/ico_pension2.png') no-repeat top 50% left 0px / 35px auto;
+                            }
+ 
+                            &.icon3 {
+                                background: url('#{$img-path}/IS/ico_pension3.png') no-repeat top 50% left 3px / 30px auto;
+                            }
+ 
+                            &.icon4 {
+                                background: url('#{$img-path}/IS/ico_pension4.png') no-repeat top 50% left 2px / 32px auto;
+                            }
+                        }
+ 
+                        .sub-title {
+                            margin-top: 10px;
+                            font-size: 16px;
+                            line-height: 22px;
+                            font-weight: 350;
+                            white-space: nowrap;
+                        }
+                    }
+ 
+                    ion-card-content {
+                        .title {
+                            line-height: 22px;
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: $fc222;
+                        }
+ 
+                        .text {
+                            line-height: 20px;
+                            font-size: 14px;
+                            font-weight: 350;
+                            color: $fc222;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+ 
+        .slide-pagination {
+            text-align: center;
+            line-height: 14px;
+            font-family: 'roboto';
+            font-weight: 500;
+ 
+            .swiper-pagination-current {
+                font-weight: 700;
+                font-size: 18px;
+            }
+ 
+            .swiper-pagination-total {
+                font-size: 18px;
+                font-weight: 350;
+            }
+        }
+ 
+        .card-area {
+            margin-top: 30px;
+            padding-bottom: 12px;
+ 
+            .main-card {
+                margin-bottom: 25px;
+ 
+                ion-card-header {
+                    .title {
+                        line-height: 18px;
+                        font-size: 18px;
+                        letter-spacing: -0.015em;
+                        font-weight: 500;
+                    }
+ 
+                    .age-area {
+                        margin: 25px -25px 0;
+                        display: flex;
+                        justify-content: space-between;
+ 
+                        &.type2 {
+                            dl {
+                                padding: 0 55px;
+                            }
+                        }
+ 
+                        dl {
+                            padding: 0 28px;
+                            border-left: 1px solid rgba(var(--key-c-fff-rgb), .3);
+                            text-align: center;
+ 
+                            &:nth-child(1) {
+                                border-left: 0;
+                            }
+ 
+                            dt {
+                                line-height: 14px;
+                                font-size: 14px;
+                                font-weight: 350;
+                                opacity: 0.6;
+                            }
+ 
+                            dd {
+                                margin-top: 16px;
+                                font-size: 50px;
+                                line-height: 37px;
+                                font-weight: 500;
+                                letter-spacing: -0.015em;
+                            }
+                        }
+                    }
+ 
+                    .text {
+                        margin-top: 17px;
+                        line-height: 22px;
+                        font-size: 16px;
+                        font-weight: 350;
+                        text-align: center;
+                    }
+                }
+ 
+                .card-footer {
+                    ion-button {
+                        border-top: 0;
+ 
+                        .text {
+                            margin-left: 28px;
+                            font-weight: 500;
+                        }
+ 
+                        .arrow {
+                            display: block;
+                            margin-left: 5px;
+
+                            &.white {
+                                span {
+                                    border-top: 1px solid #fff;
+                                    border-left: 1px solid #fff;
+                                }
+                            }
+ 
+                            span {
+                                display: inline-block;
+                                width: 7px;
+                                height: 7px;
+                                border-top: 1px solid $kc-blue;
+                                border-left: 1px solid $kc-blue;
+                                transform: rotate(135deg);
+                                margin-top: 3px;
+                                margin-bottom: 3px;
+                                margin-right: -4px;
+                                border-radius: 1px;
+                                animation: arrow-animate 1.4s infinite;
+ 
+                                &:nth-child(2) {
+                                    animation-delay: -0.1s;
+                                }
+ 
+                                &:nth-child(3) {
+                                    animation-delay: -0.2s;
+                                }
+                            }
+                        }
+ 
+                    }
+                }
+ 
+            }
+ 
+            .sub-card {
+                margin-bottom: 25px;
+ 
+                ion-card-header {
+                    ion-card-title {
+                        --color: var(--ft-c-222);
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #e6e6e6;
+                        align-items: baseline;
+ 
+                        .unit-text {
+                            font-size: 14px;
+                            color: $fc999;
+                            font-weight: 350;
+ 
+                        }
+                    }
+                }
+ 
+                .card-st3 {
+                    margin: 0;
+                    border-radius: 0;
+ 
+                    ion-card-content {
+                        padding: 0px 0px 23px 0px;
+                    }
+
+                    .btn-question {
+                        --padding-start: 0;
+                        --padding-end: 0;
+                        --background: url('#{$img-path}/is/ico_question_gray.png') no-repeat 0 0 / 100% auto;
+                        --background-activated: url('#{$img-path}/is/ico_question_gray.png') no-repeat 0 0 / 100% auto;
+                        width: 17px;
+                        height: 19px;
+                        vertical-align: middle;
+                    }
+ 
+                    .card-footer {
+                        padding-top: 22px;
+ 
+                        ul {
+                            li {
+                                margin-left: 16px;
+                                margin-top: 7px;
+                                line-height: 20px;
+                                font-size: 14px;
+                                font-weight: 350;
+                                color: $fc888;
+ 
+                                &:before {
+                                    display: inline-block;
+                                    width: 16px;
+                                    margin-left: -16px;
+                                    content: "※";
+                                    color: $fc888;
+                                }
+ 
+                                &:nth-child(1) {
+                                    margin-top: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+ 
+                ion-card-content {
+                    .title {
+                        line-height: 16px;
+                        font-size: 16px;
+                        color: fc222;
+                        letter-spacing: -0.015em;
+                        font-weight: 500;
+                    }
+ 
+                    .text {
+                        margin-top: 12px;
+                        line-height: 22px;
+                        font-size: 16px;
+                        font-weight: 350;
+                        color: $fc666;
+                    }
+ 
+                    .img-area {
+                        margin-top: 17px;
+                    }
+ 
+                    .refer-text {
+                        margin-top: 7px;
+                        line-height: 22px;
+                        font-size: 14px;
+                        text-align: right;
+                        font-weight: 350;
+                        color: $fc888;
+                    }
+                }
+            }
+        }
+ 
+        .is-list {
+            ion-item {
+                --padding-start: 0;
+                --padding-end: 0;
+                --inner-padding-start: 0;
+                --inner-padding-end: 0;
+                --inner-border-width: 0;
+                --background: #fff;
+                --border-radius: 20px;
+                margin-bottom: 30px;
+                box-shadow: 0 10px 10px #000;
+ 
+                .is-list-cont {
+                    width: 100%;
+                    background-color: #fff;
+                }
+            }
+        }
+ 
+        .is-info {
+            position: relative;
+            clear: both;
+            margin-top: 12px;
+ 
+            .is-category {
+                line-height: 22px;
+                font-weight: 350;
+                font-size: 16px;
+                color: $fc666;
+            }
+ 
+            .is-name {
+                margin-top: 4px;
+                line-height: 24px;
+                font-weight: 500;
+                font-size: 18px;
+                color: #000;
+            }
+ 
+            .is-price {
+                position: static;
+                margin-top: 8px;
+                line-height: 20px;
+                text-align: right;
+                font-size: 14px;
+                color: #000;
+ 
+                .price {
+                    font: 700 16px $roboto, $noto;
+                }
+            }
+        }
+ 
+        .is-list {
+            .is-list-header {
+                @include clearfix;
+                margin-bottom: 10px;
+            }
+ 
+            .is-list-body {
+                &:empty {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 340px;
+ 
+                    &::before {
+                        content: '';
+                        width: 120px;
+                        height: 120px;
+                        background: url(#{$img-path}/is/ico_is_list_none.png) no-repeat 0 0 / 100% auto;
+                    }
+ 
+                    &::after {
+                        content: '가입한 연금이 없습니다.';
+                        margin-top: 45px;
+                    }
+                }
+            }
+        }
+ 
+        .bot-btn-area {
+            padding-bottom: 40px;
+        }
+ 
+        /* 연금조회 상세 */
+        .pension-text-area {
+            .pop-area {
+                display: flex;
+                justify-content: flex-start;
+                height: 25px;
+ 
+                .pop-text {
+                    margin-right: 7px;
+                    line-height: 22px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $fc222;
+                }
+ 
+                .btn-info {
+                    --padding-start: 0;
+                    --padding-end: 0;
+                    --background: url('#{$img-path}/is/btn_info.png') no-repeat 0 0 / 100% auto;
+                    --background-activated: url('#{$img-path}/is/btn_info.png') no-repeat 0 0 / 100% auto;
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+ 
+            .title {
+                margin-top: 10px;
+                line-height: 27px;
+                font-size: 21px;
+                color: $fc222;
+                font-weight: 500;
+            }
+ 
+            .text {
+                margin-top: 8px;
+                line-height: 22px;
+                font-size: 16px;
+                font-weight: 350;
+                color: $fc222;
+ 
+                span {
+                    font-weight: 500;
+                }
+            }
+ 
+            .date {
+                margin-top: 14px;
+                line-height: 20px;
+                font-size: 14px;
+                font-weight: 350;
+                color: $fc222;
+            }
+        }
+ 
+        .detail-card {
+            margin-top: -15px;
+ 
+            .sup-text {
+                font-size: 14px;
+                vertical-align: top;
+                font-weight: 700;
+            }
+        }
+ 
+        .detail-refer {
+            padding-top: 27px;
+            padding-bottom: 43px;
+ 
+            ul {
+                li {
+                    margin-left: 19px;
+                    margin-bottom: 13px;
+                    line-height: 20px;
+                    font-size: 14px;
+                    color: $fc666;
+                    font-weight: 350;
+ 
+                    .bullet {
+                        display: inline-block;
+                        width: 19px;
+                        margin-left: -19px;
+                        vertical-align: bottom;
+                        font-weight: 700;
+ 
+                    }
+                }
+            }
+        }
+    }
+    /* 보험조회 */
+    &.inquiry {
+        .is-inquiry {
+            position: relative;
+            p {
+                line-height: 1.4;
+            }
+            .btn-info {
+                --padding-start: 0;
+                --padding-end: 0;
+                --background: url('#{$img-path}/is/btn_info.png') no-repeat 0 0 / 100% auto;
+                --background-activated: url('#{$img-path}/is/btn_info.png') no-repeat 0 0 / 100% auto;
+                position: absolute;
+                right: 1px;
+                bottom: 0;
+                width: 25px;
+                height: 25px;
+            }
+            .button-clear {
+                margin-top: -10px;
+                height: 20px;
+            }
+        }
+        .is-my {
+            margin-top: 30px;
+            .title {font-size: 18px}
+            .monthly-premium {
+                display: flex;
+                align-items: flex-end;
+                height: 70px;
+                dt {
+                    padding-bottom: 4px;
+                    font-weight: 300;
+                    font-size: 14px;
+                    font-family: 'Roboto';
+                }
+                dd {
+                    flex: 1;
+                    text-align: right;
+                    font-size: 14px;
+                    .price {
+                        font: 500 50px $roboto, $noto;
+                        letter-spacing: -0.03rem;
+                    }
+                }
+            }
+        }
+        .card-footer {
+            ion-button {
+                .text {
+                    margin-left: 28px;
+                }
+            }
+        }
+        
+        .arrow {
+            margin-left: 5px;
+            span {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-top: 1px solid #05a2be;
+                border-left: 1px solid #05a2be;
+                transform: rotate(135deg);
+                margin-top: 3px;
+                margin-bottom: 3px;
+                margin-right: -4px;
+                animation: arrow-animate 1.5s infinite;
+    
+                &:nth-child(2) {
+                    animation-delay: -0.1s;
+                }
+    
+                &:nth-child(3) {
+                    animation-delay: -0.2s;
+                }
+            }
+        }
+    
+        @keyframes arrow-animate {
+            0% {
+                opacity: 0;
+                transform: rotate(135deg) translate(5px, 5px);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: rotate(135deg) translate(-5px, -5px);
+            }
+        }
+        .is-list {
+            ion-item {
+                --padding-start: 0;
+                --padding-end: 0;
+                --inner-padding-start: 0;
+                --inner-padding-end: 0;
+                --inner-border-width: 0;
+                --background: #fff;
+                --border-radius: 20px;
+                margin-bottom: 30px;
+                box-shadow: 0 10px 10px #000;
+                .is-list-cont {
+                    width: 100%;
+                    background-color: #fff;
+                }
+            }
+        }
+        .is-info {
+            position: relative;
+            clear: both;
+            margin-top: 15px;
+            .is-co-logo {
+                >*,img {
+                    display: block;
+                    width: auto;
+                    height: 15px;
+                }
+            }
+            .is-co {
+                font-size: 18px;
+                color: #000;
+            }
+            .is-name {
+                font-weight: 350;
+                font-size: 16px;
+                color: #000;
+            }
+            .is-price {
+                position: absolute;
+                right: 0;
+                top: 18px;
+                font-size: 14px;
+                .price {
+                    font: 700 16px $roboto, $noto;
+                }
+            }
+            .is-period {
+                margin-top: 16px;
+                font-weight: 350;
+                font-size: 14px;
+                font-family: $roboto, $noto;
+                color: #666;
+            }
+            .is-insured {
+                font-weight: 350;
+                font-size: 14px;
+                color: #666;
+            }
+        }
+        .is-detail {
+            padding-bottom: 40px !important;
+            .is-co {
+                font-size: 21px;
+            }
+            .is-kinds {
+                font-size: 21px;
+                color: $fc999;
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    margin: 0px 10px;
+                    width: 1px;
+                    height: 21px;
+                    background-color: #e0e0e0;
+                    vertical-align: -2px;
+                }
+            }
+            .is-name {
+                font-size: 14px;
+            }
+            .is-price {
+                position: static;
+                font-weight: 350;
+                .price {
+                    font-weight: 400;
+                    font-size: 50px;
+                }
+            }        
+            .is-info-detail {
+                margin-top: 25px;
+                dt {
+                    float: left;
+                    width: 75px;
+                    font-weight: 350;
+                    color: #666;
+                }
+            }
+        }
+        //보험조회목록
+        .is-list {
+            .is-list-header {
+                @include clearfix;
+                margin-bottom: 10px;
+            }
+            .btn-filter {
+                --color-activated: #222;
+                --padding-start: 0;
+                --padding-end: 25px;
+                --background: url(#{$img-path}/ico_sort.png) no-repeat 100% 50% / 15px auto;
+                --background-activated: url(#{$img-path}/ico_sort.png) no-repeat 100% 50% / 15px auto;
+                float: right;
+                height: 20px;
+                font-size: 14px;
+                color: #222;
+                text-decoration: underline;
+            }
+            .is-list-body {
+                &:empty {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 340px;
+                    &::before {
+                        content: '';
+                        width: 120px;
+                        height: 120px;
+                        background: url(#{$img-path}/is/ico_is_list_none.png) no-repeat 0 0 / 100% auto;
+                    }
+                    &::after {
+                        content: '가입한 보험이 없습니다.';
+                        margin-top: 45px;
+                    }
+                }
+            }
+        }
+        //보험상세탭
+        ion-tab {
+            padding-bottom: 50px;
+        }
+        .tabs-st3 {
+            ion-tab-bar {
+                justify-content: inherit;
+                ion-tab-button {
+                    flex: inherit;
+                    padding-left: 20px;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+ 
+    /* 보험상담 */
+    &.consult {
+        .is-consult {
+            .card-header-area {
+                .name {
+                    margin-bottom: 12px;
+                    line-height: 18px;
+                    font-size: 18px;
+                    letter-spacing: -0.015em;
+                    font-weight: 500;
+                }
+ 
+                .text {
+                    line-height: 22px;
+                    font-size: 16px;
+                    letter-spacing: -0.015em;
+                    font-weight: 350;
+                }
+            }
+ 
+            .card-footer {
+                ion-button {
+                    border-top: 0;
+                }
+                .text {
+                    margin-left: 28px;
+                }
+            }
+        }
+ 
+        .arrow {
+            margin-left: 5px;
+            span {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-top: 1px solid #05a2be;
+                border-left: 1px solid #05a2be;
+                transform: rotate(135deg);
+                margin-top: 3px;
+                margin-bottom: 3px;
+                margin-right: -4px;
+                animation: arrow-animate 1.5s infinite;
+ 
+                &:nth-child(2) {
+                    animation-delay: -0.1s;
+                }
+ 
+                &:nth-child(3) {
+                    animation-delay: -0.2s;
+                }
+            }
+        }
+ 
+        @keyframes arrow-animate {
+            0% {
+                opacity: 0;
+                transform: rotate(135deg) translate(5px, 5px);
+            }
+ 
+            50% {
+                opacity: 1;
+            }
+ 
+            100% {
+                opacity: 0;
+                transform: rotate(135deg) translate(-5px, -5px);
+            }
+        }
+ 
+        //보험조회목록
+        .is-list {
+            .is-list-header {
+                @include clearfix;
+                margin-bottom: 10px;
+            }
+ 
+            .is-card {
+                &.disabled {
+                    .text-area {
+                        .text {
+                            color: $fc999;
+                        }
+ 
+                        .date {
+                            color: $fc999;
+                        }
+                    }
+ 
+                    .card-footer {
+                        .consultant {
+                            color: $fc999;
+                        }
+                    }
+                }
+ 
+                .text-area {
+                    margin-top: 7px;
+                    margin-bottom: -5px;
+ 
+                    .text {
+                        line-height: 24px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $fc222;
+                    }
+ 
+                    .date {
+                        line-height: 20px;
+                        font-size: 14px;
+                        font-weight: 350;
+                        color: $fc666;
+                    }
+                }
+ 
+                .card-footer {
+                    padding: 17px 25px;
+                    border-top: 1px solid #e6e6e6;
+ 
+                    .consultant {
+                        line-height: 16px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: $fc222;
+                    }
+                }
+            }
+ 
+            .btn-filter {
+                --color-activated: #222;
+                --padding-start: 0;
+                --padding-end: 25px;
+                --background: url(#{$img-path}/ico_sort.png) no-repeat 100% 50% / 15px auto;
+                --background-activated: url(#{$img-path}/ico_sort.png) no-repeat 100% 50% / 15px auto;
+                float: right;
+                height: 20px;
+                font-size: 14px;
+                color: #222;
+                text-decoration: underline;
+            }
+ 
+            .is-list-body {
+                &:empty {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 340px;
+ 
+                    &::before {
+                        content: '';
+                        width: 120px;
+                        height: 120px;
+                        background: url(#{$img-path}/is/ico_is_list_none.png) no-repeat 0 0 / 100% auto;
+                    }
+ 
+                    &::after {
+                        content: '요청한 상담이 없습니다. \A 보험상담을 요청해보세요.';
+                        white-space: pre;
+                        text-align: center;
+                        margin-top: 45px;
+                    }
+                }
+            }
+        }
+ 
+        // 보험상담 상세
+        .consultant-info-area {
+            display: flex;
+            justify-content: space-between;
+
+            .info {
+                .grade {
+                    height: 14px;
+
+                    span {
+                        vertical-align: top;
+                    }
+                }
+
+                .company {
+                    margin-top: 15px;
+                    line-height: 16px;
+                    font-size: 16px;
+                    color: $fc222;
+                    font-weight: 500;
+                }
+
+                .name {
+                    margin-top: 7px;
+                    line-height: 16px;
+                    font-size: 16px;
+                    color: $fc222;
+                    font-weight: 500;
+                }
+
+                .nickname {
+                    margin-top: 10px;
+                    line-height: 14px;
+                    font-size: 14px;
+                    color: $fc666;
+                    font-weight: 350;
+                }
+            }
+
+            .mark {
+                align-self: flex-end;
+                width: 55px;
+                height: 55px;
+
+                &.icon1 {
+                    background: url('#{$img-path}/is/ico_consultant_mark1.png') no-repeat 0 0 / 100% auto;
+                }
+
+                &.icon2 {
+                    background: url('#{$img-path}/is/ico_consultant_mark2.png') no-repeat 0 0 / 100% auto;
+                }
+            }
+        }
+        .cont-header {
+            &.detail {
+                .title {
+                    line-height: 24px;
+                    font-size: 18px;
+                    color: $fc222;
+                    font-weight: 500;
+                }
+ 
+                .date {
+                    margin-top: 7px;
+                    line-height: 14px;
+                    font-size: 14px;
+                    color: $fc666;
+                    font-weight: 350;
+                    span {
+                        &:before {
+                            content: "";
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 1px;
+                            height: 14px;
+                            margin: -2px 10px 0;
+                            background-color: #e0e0e0;
+                        }
+ 
+                        &:first-child {
+                            &:before {
+                                width: 0;
+                                height: 0;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+ 
+        .cont-body {
+            &.detail {
+                padding-top: 0px !important;
+                padding-bottom: 74px !important;
+ 
+                .report-card {
+                    ion-card-content {
+                        ul {
+                            li {
+                                margin-top: 20px;
+ 
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+ 
+                                .report-name {
+                                    line-height: 16px;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    color: $fc222;
+                                }
+ 
+                                .report-info {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    margin-top: 10px;
+                                    line-height: 14px;
+                                    font-size: 14px;
+                                    font-weight: 350;
+                                    color: $fc666;
+ 
+                                    .info {
+                                        span {
+                                            &:before {
+                                                content: "";
+                                                display: inline-block;
+                                                vertical-align: middle;
+                                                width: 1px;
+                                                height: 14px;
+                                                margin: -2px 10px 0;
+                                                background-color: #e0e0e0;
+                                            }
+ 
+                                            &:first-child {
+                                                &:before {
+                                                    width: 0;
+                                                    height: 0;
+                                                    margin: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* 보장분석 */
+    &.analysis {
+        .question-list {
+            margin-top: 26px;
+    
+            li {
+                margin-bottom: 41px;
+    
+                .num {
+                    font-size: 30px;
+                    line-height: 36px;
+                    color: $kc-blue;
+                    font-weight: 700;
+                }
+    
+                .question {
+                    margin-top: 4px;
+                    margin-bottom: 28px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $fc222;
+                    font-weight: 500;
+                    .sub-text {
+                        display: block;
+                        margin-top: 6px;
+                        font-size: 14px;
+                        line-height: 24px;
+                        font-weight: 350;
+                        color: $fc666;
+                    }
+                }
+    
+                .question-radio {
+                    .radio-item {
+                        margin-top: 15px;
+                        --border-color: var(--bg-c-line);
+                        --border-width: 1px;
+                        --border-radius: 14px;
+                        --transition: none;
+                        --padding-start: 24px;
+                        --inner-padding-bottom: 22px;
+                        --inner-padding-top: 22px;
+    
+                        .radio-btn {
+                            width: 20px;
+                            height: 20px;
+                            margin: 0 11px auto 0;
+                            --color-checked: transparent;
+                            background: var(--bg-c-line) url('#{$img-path}/ht/ico_radio_gray.png') no-repeat 0 0 / 100% auto;
+                            border-radius: 20px;
+                        }
+    
+                        .radio-btn.radio-checked {
+                            background: $kc-blue url('#{$img-path}/ht/ico_radio_white.png') no-repeat 0 0 / 100% auto;
+                        }
+    
+                        .radio-label {
+                            margin: 0;
+                            font-size: 16px;
+                            line-height: 20px;
+                            font-weight: 350;
+                            color: $fc222;
+                        }
+    
+                        &.item-radio-checked {
+                            --background: #fff;
+                            --border-color: #fff;
+                            --box-shadow: 0 8px 19px rgba(0, 0, 0, 0.15);
+    
+                            .radio-label {
+                                color: $kc-blue;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+    
+                .question-card {
+                    ion-card-content {
+                        ion-grid {
+                            padding: 12px 0 10px;
+                        }
+                    }
+                }
+            }
+            .input-after {
+                position: absolute;
+                bottom: 7px;
+                right: 0;
+                font-size: 16px;
+                font-weight: 350;
+                color: $fc999;
+            }
+        }
+    }    
+}

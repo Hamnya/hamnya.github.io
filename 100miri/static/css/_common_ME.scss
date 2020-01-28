@@ -1,0 +1,170 @@
+
+.cs {
+    //board
+    .title {
+        font-size: 16px;
+    }
+    .date,.status,.reply-date {        
+        font-size: 14px;        
+    }
+    .date {
+        @extend .roboto;
+        color: #666;
+    }
+    .status{        
+        color: #666;
+        &.done {
+            @extend .kc-g;
+        }
+    }
+    .text {
+        font-weight: 350;
+        line-height: 1.4;
+    }
+    .board-header {
+        padding-bottom: 20px;
+        .cate {display: block}
+    }
+    .board-body {
+        padding-top: 15px;
+    }
+    .board-ask-tl {
+        padding: 20px 0;
+        border-top: 1px solid $bgc2;
+        .date {
+            display: flex;
+            align-items: center;
+            dt,dd {
+                font: 500 14px $roboto, $noto;
+                color: #222;
+            }
+            dt {
+                flex: 0 1 auto;
+            }
+            dd {
+                flex: 1;
+                margin-top: 2px;
+                padding-left: 3px;
+                font-weight: 500;
+            }
+        }
+    }
+    .reply-date {
+        padding-bottom: 20px;
+        color: #222;
+        .date {color: #222;}
+    }
+    .cont-count {
+        position: relative;
+        float: right;
+        top: 7px;
+        @extend .roboto;
+        font-size: 14px;
+        color: #888;
+        .write {
+            color: #222;
+        }
+    }
+    .board-reask {
+        .board-body {
+            margin-bottom: 20px;
+            padding: 25px 25px;
+            border-radius: 2.5px;
+            background: $bgc1;
+        }
+        &.old {
+            display: none;
+        }
+    }
+    .cont-header {
+        padding-bottom: 25px !important;
+    }
+    .cont-body {
+        .board-reask.old {
+            display: block;
+            .board-body {
+                background: #fff;
+            }
+            &:first-of-type {
+                .board-ask-tl {
+                    border-top: 0;
+                }
+            }
+        }
+    }
+}
+/* 회원가입 */
+.limit-time {
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+    font-size: 16px;
+    color: #ff583e;
+}
+.dash {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 100%;    
+    text-indent: -9999px;
+    //background: red;
+    &::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        content: '';
+        display: inline-block;
+        width: 9px;
+        height: 1px;
+        margin-left: -4.5px;
+        background-color: #222;
+    }
+}
+
+
+.divider {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 1px;
+    height: 12.5px;
+    margin: 0 10px;
+    background-color: #e0e0e0;
+}
+
+//자주묻는질문 검색영역
+.schbar {
+    --background: transparent;
+    padding: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    &.searchbar-has-value {        
+        border-bottom-color: #000;
+    }
+    &.searchbar-has-focus {        
+        border-bottom-color: #0ecea7;
+    }
+    .searchbar-input {
+        padding: 0 80px 0 20px !important;
+        font-weight: 350;
+        font-size: 21px;
+        color: #222;
+    }
+    .searchbar-search-icon {
+        top: 50%;
+        left: inherit;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+        margin-top: -12.5px;
+        background: url(#{$img-path}/btn_sch.png) no-repeat 0 0 / 100% auto;
+    }
+    .searchbar-clear-button {
+        top: 50%;
+        right: 60px;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        background: url(#{$img-path}/btn_clear.png) no-repeat 0 0 / 100% auto;
+    }
+}

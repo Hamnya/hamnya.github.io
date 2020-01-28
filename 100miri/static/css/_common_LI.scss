@@ -1,0 +1,330 @@
+//LIFE Common
+.life {
+    // 공통 
+    .weather-icon {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+
+        &.sun {
+            background: url('#{$img-path}/li/ico_sun.png') no-repeat left 0 top 50% / 65px auto;
+        }
+
+        &.cloud {
+            background: url('#{$img-path}/li/ico_cloud.png') no-repeat left 0 top 50% / 65px auto;
+        }
+    }
+
+    .temper-area {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+
+        .day {
+            margin-right: 15px;
+            font-size: 16px;
+            color: $fc222;
+            font-weight: 350;
+        }
+
+        .temperature {
+            font-family: roboto;
+            font-size: 15px;
+            color: $fc222;
+            font-weight: 500;
+
+            .num {
+                font-size: 40px;
+            }
+        }
+
+        .slash {
+            margin: 0 8px;
+            font-family: roboto;
+            font-size: 17px;
+            color: $fc222;
+            font-weight: 350;
+        }
+    }
+
+    .weather-info {
+        dl {
+            dt {
+                line-height: 14px;
+                font-size: 14px;
+                color: $fc888;
+                font-weight: 350;
+            }
+
+            dd {
+                .percent {
+                    line-height: 15px;
+                    font-size: 10px;
+                    color: $fc222;
+                    font-weight: 500;
+
+                    .num {
+                        font-size: 15px;
+                    }
+                }
+
+                .status {
+                    padding-left: 17px;
+                    line-height: 15px;
+                    font-size: 14px;
+                    font-weight: 350;
+                    white-space: nowrap;
+
+                    // 좋음
+                    &.icon1 {
+                        color: $kc-blue;
+                        background: url('#{$img-path}/li/ico_face_s_01.png') no-repeat left 0 top 50% / 15px auto;
+                    }
+
+                    // 보통
+                    &.icon2 {
+                        color: #92cc41;
+                        background: url('#{$img-path}/li/ico_face_s_02.png') no-repeat left 0 top 50% / 15px auto;
+                    }
+
+                    // 나쁨
+                    &.icon3 {
+                        color: #d8bb00;
+                        background: url('#{$img-path}/li/ico_face_s_03.png') no-repeat left 0 top 50% / 15px auto;
+                    }
+
+                    // 매우나쁨
+                    &.icon4 {
+                        color: #ff9019;
+                        background: url('#{$img-path}/li/ico_face_s_04.png') no-repeat left 0 top 50% / 15px auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .indices-icon {
+        padding-top: 26px;
+        text-align: center;
+        font-size: 0;
+        ion-badge {
+            --padding-start: 10px;
+            --padding-end: 10px;
+            height: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        // 낮음
+        &.icon1 {
+            background: url('#{$img-path}/li/ico_face_01.png') no-repeat left 50% top 0% / 21px auto;
+
+            ion-badge {
+                --background: #05a2be;
+            }
+        }
+
+        // 보통
+        &.icon2 {
+            background: url('#{$img-path}/li/ico_face_02.png') no-repeat left 50% top 0% / 21px auto;
+
+            ion-badge {
+                --background: #92cc41;
+            }
+        }
+
+        // 높음
+        &.icon3 {
+            background: url('#{$img-path}/li/ico_face_03.png') no-repeat left 50% top 0% / 21px auto;
+
+            ion-badge {
+                --background: #d8bb00;
+            }
+        }
+
+        // 매우높음
+        &.icon4 {
+            background: url('#{$img-path}/li/ico_face_04.png') no-repeat left 50% top 0% / 21px auto;
+
+            ion-badge {
+                --background: #ff9019;
+            }
+        }
+
+        // 위험
+        &.icon5 {
+            background: url('#{$img-path}/li/ico_face_05.png') no-repeat left 50% top 0% / 21px auto;
+
+            ion-badge {
+                --background: #ff333a;
+            }
+        }
+    }
+}
+.life {
+    &[class*='magazine'] {
+        .list-cont {
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .cate {
+                order: -1;
+
+                ion-badge {
+                    padding: 8px 20px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    border-radius: 15px;
+                    background-color: $kc-blue;
+                }
+            }
+
+            .title {
+                margin: 3px 0 10px;
+                font-weight: 350;
+                font-size: 21px;
+                line-height: 1.3;
+                letter-spacing: -0.0125rem;
+                color: #fff;
+            }
+
+            .tag {
+                ion-badge {
+                    padding: 3px 10px 4px;
+                    font-weight: 350;
+                    font-size: 13px;
+                    color: #fff;
+                    border-radius: 2px;
+                    background-color: rgba(255, 255, 255, .2);
+
+                    +ion-badge {
+                        margin-left: 2px;
+                    }
+                }
+            }
+        }
+
+        .visual {
+            position: relative;
+            z-index: -1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 1.6));
+            }
+        }
+    }
+    &.magazine-detail {
+        .cont-header {
+            position: relative;
+            height: 280px;
+            padding: 0 !important;
+        }
+        .cont-body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #fff;
+        }
+
+        .list-cont {
+            z-index: 10;
+        }
+
+        .visual {
+            overflow: hidden;
+            height: 100%;
+            z-index: 1;
+
+            &::before {
+                background-image: linear-gradient(rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 1.5));
+            }
+        }
+
+        .mag-list {
+            strong {
+                font-weight: 500;
+            }
+
+            >li {
+                +li {
+                    margin-top: 50px;
+                }
+
+                .no {
+                    display: inline-block;
+                    font-size: 18px;
+                    font-family: "Roboto";
+                    border-bottom: 3px solid #222
+                }
+            }
+
+            .title {
+                display: block;
+                margin: 9px 0 15px;
+                font-size: 18px;
+            }
+
+            p {
+                font-weight: 350;
+                font-size: 16px;
+            }
+
+            ul {
+                li {
+                    strong {
+                        position: relative;
+                        display: block;
+                        padding-left: 25px;
+                        color: $kc-green;
+                        .no {
+                            position: absolute;
+                            left: 0;
+                            top: 5px;
+                            width: 15px;
+                            height: 15px;
+                            margin-right: 10px;
+                            font-size: 10px;
+                            text-align: center;
+                            vertical-align: middle;
+                            color: #fff;
+                            border: 0;
+                            border-radius: 50%;
+                            background-color: $kc-green;
+                        }
+                        em {
+                            font-style: normal;
+                            font-weight: 350;
+                        }
+                    }
+                    +li {margin-top: 10px;}
+                    p+p {
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+
+        .source {
+            margin-top: 60px;
+            font-weight: 350;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .hashtag {
+            margin-top: 20px;
+            font-weight: 350;
+            font-size: 16px;
+        }
+    }
+}

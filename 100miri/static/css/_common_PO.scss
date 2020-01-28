@@ -1,0 +1,186 @@
+.modal {
+    .find-addr,.health-info {
+        ion-list {
+            overflow-y: scroll;
+            height: 195px;
+            margin: 34px 0 0 0;
+            ion-item {
+                --padding-start: 0;
+                --inner-padding-end: 0;
+                --min-height: inherit;
+                font-weight: 350;
+                font-size: 18px;
+                + ion-item {
+                    margin-top: 10px;
+                }
+            }
+            &:empty {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 13px;
+                    background: url('#{$img-path}/ico_empty.png') no-repeat 0 0 / 100% auto;
+                }
+                &::after {
+                    content: '검색 결과가 없습니다.';
+                    font-weight: 350;
+                    font-size: 18px;
+                    color: #999;
+                }
+            }        
+        }
+    }
+    //주소검색
+    .find-addr {
+        ion-list:empty {
+            &::after {
+                content: '검색 결과가 없습니다.';
+            }
+        }
+    }
+    //건강검진정보 불러오기
+    .health-info {
+        ion-list:empty {
+            &::after {
+                content: '건강검진정보가 없습니다.';
+            }
+        }
+    }
+    //필터,정렬
+    .modal-filter {
+        ion-card-header {
+            display: flex;
+            align-items: baseline;
+            .sub-text {
+                margin-left: auto;
+                font-weight: 350;
+                font-size: 14px;
+                color: $fc888;
+            }
+        }
+        .checkbox-area {
+            display: block;
+            width: 100%;
+            ion-list {
+                display: flex;
+                flex-direction: row;
+                ion-item {
+                    --padding-start: 0px;
+                    --inner-padding-end: 0;
+                    width: 25%;
+                    border: 1px solid $bgc2;
+                    box-sizing: border-box;
+                    margin-left: -1px;
+                    &:nth-child(1) {
+                        margin-left: 0;
+                    }
+                    &.item-checkbox-checked {
+                        border-color: $kc-blue;
+                        ion-label {
+                            color: $kc-blue;
+                            font-weight: 500;
+                        }
+                        &+ion-item {
+                            border-left-color: $kc-blue;
+                        }
+                    }
+                    ion-checkbox {
+                        width: 0px;
+                        height: 0px;
+                        overflow: hidden;
+                        margin: 0;
+                    }
+                    ion-label {
+                        width: 100%;
+                        margin: 0;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 350;
+                        color: $fc999;
+                    }
+                }
+            }
+        }
+        .radio-area {
+            display: block;
+            width: 100%;
+
+            ion-list {
+                .item-group {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                ion-item {
+                    --min-height: auto;
+                    --padding-start: 0px;
+                    --padding-top: 11px;
+                    --padding-bottom: 11px;
+                    --inner-padding-end: 0;
+                    width: 25%;
+                    border: 1px solid $bgc2;
+                    box-sizing: border-box;
+                    margin-left: -1px;
+
+                    &.item-text-center {
+                        --min-height: 44px;
+                    }
+
+                    &:nth-child(1) {
+                        margin-left: 0;
+                    }
+
+                    &.item-radio-checked {
+                        border-color: $kc-blue;
+
+                        ion-label {
+                            color: $kc-blue;
+                            font-weight: 500;
+                        }
+
+                        &+ion-item {
+                            border-left-color: $kc-blue;
+                        }
+                    }
+
+                    ion-radio {
+                        width: 0px;
+                        height: 0px;
+                        overflow: hidden;
+                        margin: 0;
+                    }
+
+                    ion-label {
+                        width: 100%;
+                        margin: 0;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 350;
+                        color: $fc999;
+                    }
+                }
+            }
+        }
+        .reset-area {
+            text-align: center;
+            .btn-reset {
+                --padding-start: 19px;
+                --padding-end: 0;
+                height: 14px;
+                margin-top: 20px;
+                font-size: 14px;
+                color: $fc222;
+                vertical-align: top;
+                text-decoration: none;
+                background: url('#{$img-path}/btn_reset.png') no-repeat left 0 top 50% / 13px auto;
+            }
+        }
+    }
+}

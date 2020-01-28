@@ -1,0 +1,61 @@
+.mm {
+    #header.header-st2 {
+        ion-buttons {
+            ion-back-button {
+                display: block;
+            }
+        }
+    }
+}
+.card-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 538px;
+    text-align: center;
+    h2 {
+        font-size: 21px;
+    }
+    p,ul,li {
+        font-weight: 350;
+        font-size: 16px;
+    }
+    .ico {
+        width: 160px;
+        height: 160px;
+        margin: 40px 0;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 160px auto;
+    }
+}
+.login-password {
+    h2 {
+        font-weight: 350;
+        font-size: 18px;
+    }
+    .form-password {
+        margin-top: 24px;
+        ion-item {
+            position: relative;
+            --inner-border-width: 0;
+            ion-label.pass-label {
+                position: absolute;
+                left: 0;
+                top: 0;
+                max-width: inherit;
+                font-family: $noto !important;
+                font-size: 78px;
+                letter-spacing: 12px;
+                color: #999;
+            }
+        }
+        ion-input {
+            font-family: $noto !important;
+            font-size: 78px;
+            letter-spacing: 12px;
+            caret-color: transparent !important;
+        }    
+    }
+}
