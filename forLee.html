@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x-mas 2020!</title>
+    <link rel="shortcut icon" href="https://freepngimg.com/download/christmas/26196-6-christmas-stocking.png">
+    <!-- 공유할때 이미지, 텍스트 -->
+    <meta property="og:image" content="https://www.portalsystems.de/wp-content/uploads/2018/12/portal-systems-merry-christmas-snowmen.jpg">
+    <meta property="og:title" content="크리스마스 카드">
+    <meta property="og:description" content="한나 드림">
+
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poor Story', cursive;
+        }
+
+        body {
+            background-color: #9b070f;
+        }
+
+        .envelope {
+            width: 200px;
+            height: 200px;
+
+            background-image: url(https://pngimg.com/uploads/envelope/envelope_PNG18366.png);
+            background-size: cover;
+            background-position: center;
+
+            margin: 200px auto 0px auto;
+            cursor: pointer;
+        }
+
+        .envelope-msg {
+            color: white;
+            text-align: center;
+        }
+
+        .letter-close {
+            display: block;
+        }
+        .letter-open {
+            display: none;
+        }
+
+        .rtan {
+            background-color: white;
+            width: 200px;
+            height: 200px;
+
+            background-image: url('https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/Webp.net-gifmaker.gif');
+            background-size: cover;
+            background-position: center;
+
+            margin: 100px auto 0px auto;
+            border-radius: 100px;
+            border: 5px solid white;
+            /* 가로로, 밑으로 얼마나 그림자가 치우칠건가 - 치우치면 안되서 0,0 */
+            /* 얼마나 뿌옇게, 얼마나 길게 뿌옇게 할것인가 10,0 */
+            box-shadow: 0px 0px 10px 0px white;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .messagebox {
+            background-color: ivory;
+            color: brown;
+
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            font-size: 20px;
+            /* 줄간격 */
+            line-height: 30px;
+            box-shadow: 0px 0px 10px 0px white;
+        }
+
+        .from {
+            text-align: right;
+            margin-bottom: 0px;
+        }
+        @media screen and (max-width: 760px) {
+            .messagebox{
+                width: 300px;
+                padding: 20px;
+            }
+            .rtan {
+                width: 150px;
+                height: 150px;
+                margin: 70px auto 0px auto;
+            }
+            .h1 {
+                font-size: 28px;
+            }
+            .envelope {
+                margin: 150px auto 0px auto;
+            }
+        }
+    </style>
+    <script>
+
+        function open_letter() {
+            document.getElementsByClassName("letter-close")[0].style.display = 'none'
+            document.getElementsByClassName("letter-open")[0].style.display = 'block'
+        }
+
+        function go_rtan() {
+            alert('부장님 2021년에도 화이팅!')
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="letter-close"  onclick="open_letter()">
+        <div class="envelope"></div>
+        <h2 class="envelope-msg">보경이에게</h2>
+    </div>
+    <div class="letter-open">
+        <div class="rtan" onclick="go_rtan()"></div>
+        <h1>2020년 해피 크리스마스!</h1>
+        
+        <div class="messagebox">
+            안녕하세요 성우 부장님. <br />
+            크리스마스가 다가오네요. <br />
+            오늘 비록 5시 퇴근은 실패했지만<br />
+            항상 부장님을 응원할게요<br/> 
+            올 한해 케어 오셔서 저희 돌보느라 고생하셨어요<br/>
+            내년엔 행복한 모습으로 서로를 볼 수 있길 바래요<br />
+            ( つ•̀ω•́)つ 받아주세요!!!! Merry Christas <br />
+            <p class="from">2020년 한나 드림</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
